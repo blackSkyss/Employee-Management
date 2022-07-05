@@ -23,6 +23,16 @@ namespace ManagementApp
         {
             this.ControlBox = false;
             this.WindowState = FormWindowState.Maximized;
+
+            txtid.Enabled = false;
+            txtname.Enabled = false;
+            txtidtype.Enabled = false;
+            txtidemp.Enabled = false;
+            dtpdoi.Enabled = false;
+
+            cboType.SelectedIndex = 0;
+            btnDelete.Enabled = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e) => Close();

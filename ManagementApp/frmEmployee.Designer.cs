@@ -60,9 +60,12 @@
             this.txtrole = new System.Windows.Forms.TextBox();
             this.txtidpos = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cbofilter = new System.Windows.Forms.ComboBox();
+            this.cbofilterdep = new System.Windows.Forms.ComboBox();
             this.cbotype = new System.Windows.Forms.ComboBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
+            this.cbofilterpos = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvemp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -337,13 +340,14 @@
             this.label10.TabIndex = 33;
             this.label10.Text = "ID Pos";
             // 
-            // cbofilter
+            // cbofilterdep
             // 
-            this.cbofilter.FormattingEnabled = true;
-            this.cbofilter.Location = new System.Drawing.Point(526, 259);
-            this.cbofilter.Name = "cbofilter";
-            this.cbofilter.Size = new System.Drawing.Size(352, 29);
-            this.cbofilter.TabIndex = 35;
+            this.cbofilterdep.FormattingEnabled = true;
+            this.cbofilterdep.Location = new System.Drawing.Point(526, 259);
+            this.cbofilterdep.Name = "cbofilterdep";
+            this.cbofilterdep.Size = new System.Drawing.Size(176, 29);
+            this.cbofilterdep.TabIndex = 35;
+            this.cbofilterdep.Text = "Department";
             // 
             // cbotype
             // 
@@ -354,24 +358,54 @@
             "Email"});
             this.cbotype.Location = new System.Drawing.Point(526, 306);
             this.cbotype.Name = "cbotype";
-            this.cbotype.Size = new System.Drawing.Size(161, 29);
+            this.cbotype.Size = new System.Drawing.Size(176, 29);
             this.cbotype.TabIndex = 36;
             // 
             // txtsearch
             // 
-            this.txtsearch.Location = new System.Drawing.Point(706, 307);
+            this.txtsearch.Location = new System.Drawing.Point(721, 307);
             this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(172, 28);
+            this.txtsearch.Size = new System.Drawing.Size(161, 28);
             this.txtsearch.TabIndex = 37;
+            // 
+            // cbofilterpos
+            // 
+            this.cbofilterpos.FormattingEnabled = true;
+            this.cbofilterpos.Location = new System.Drawing.Point(721, 259);
+            this.cbofilterpos.Name = "cbofilterpos";
+            this.cbofilterpos.Size = new System.Drawing.Size(161, 29);
+            this.cbofilterpos.TabIndex = 38;
+            this.cbofilterpos.Text = "Position";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(422, 262);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 21);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Filter";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(422, 310);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(76, 21);
+            this.label12.TabIndex = 40;
+            this.label12.Text = "Search";
             // 
             // frmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1181, 596);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.cbofilterpos);
             this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.cbotype);
-            this.Controls.Add(this.cbofilter);
+            this.Controls.Add(this.cbofilterdep);
             this.Controls.Add(this.txtidpos);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtrole);
@@ -449,8 +483,11 @@
         private System.Windows.Forms.TextBox txtrole;
         private System.Windows.Forms.TextBox txtidpos;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbofilter;
+        private System.Windows.Forms.ComboBox cbofilterdep;
         private System.Windows.Forms.ComboBox cbotype;
         private System.Windows.Forms.TextBox txtsearch;
+        private System.Windows.Forms.ComboBox cbofilterpos;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -23,6 +23,23 @@ namespace ManagementApp
         {
             this.ControlBox = false;
             this.WindowState = FormWindowState.Maximized;
+            btnDelete.Enabled = false;
+
+            txtid.Enabled = false;
+            txtname.Enabled = false;
+            txtaddress.Enabled = false;
+            txtgender.Enabled = false;
+            txtphone.Enabled = false;
+            dtpdob.Enabled = false;
+            dtpjoindate.Enabled = false;
+            txtemail.Enabled = false;
+            txtpassword.Enabled = false;
+            txtrole.Enabled = false;
+            txtsalary.Enabled = false;
+            txtiddep.Enabled = false;
+            txtidpos.Enabled = false;
+
+            cbotype.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e) => Close();
