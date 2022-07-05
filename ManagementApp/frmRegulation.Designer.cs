@@ -28,12 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label1.Location = new System.Drawing.Point(446, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(309, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Regulation Management";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.Location = new System.Drawing.Point(558, 545);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(112, 34);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // frmRegulation
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1181, 596);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.label1);
+            this.Name = "frmRegulation";
             this.Text = "frmRegulation";
+            this.Load += new System.EventHandler(this.frmRegulation_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnClose;
     }
 }

@@ -12,9 +12,19 @@ namespace ManagementApp
 {
     public partial class frmCertificate : Form
     {
+        public string email { get; set; }
+        public int? role { get; set; }
         public frmCertificate()
         {
             InitializeComponent();
         }
+
+        private void frmCertificate_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void button1_Click(object sender, EventArgs e) => Close();
     }
 }

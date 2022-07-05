@@ -16,5 +16,14 @@ namespace ManagementApp
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e) => Close();
+
+        private void frmRwAndPt_Load(object sender, EventArgs e)
+        {
+
+            this.ControlBox = false;
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }
