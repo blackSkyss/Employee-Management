@@ -22,6 +22,14 @@ namespace ManagementApp
 
             this.ControlBox = false;
             this.WindowState = FormWindowState.Maximized;
+
+            txtid.Enabled = false;
+            txtname.Enabled = false;
+            txtdes.Enabled = false;
+            txtloc.Enabled = false;
+
+            cbotype.SelectedIndex = 0;
+            btnDelete.Enabled = false;
         }
 
         private void btnClose_Click(object sender, EventArgs e) => Close();
