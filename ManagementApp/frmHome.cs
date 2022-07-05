@@ -12,6 +12,8 @@ namespace ManagementApp
 {
     public partial class frmHome : Form
     {
+        public string email { get; set; }
+        public int? role { get; set; }
         public frmHome()
         {
             InitializeComponent();

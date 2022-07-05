@@ -18,5 +18,7 @@ namespace DataAccess.Repository
         void DeleteEmployee(Employee employee);
 
         void ChangeDepartment(int idEmp, int depnum);
+
+        Employee Login(string email, string password);
     }
 }
