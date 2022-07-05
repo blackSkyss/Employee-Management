@@ -82,7 +82,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                throw new Exception("Can not find this meployee by name!!!");
+                throw new Exception("Can not find this employee by name!!!");
             }
 
             return listEmp;
