@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,18 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Repository
 {
-    internal class ICertificateRepository
+    public interface ICertificateRepository
     {
+        List<Certificate> GetAllCertificate();
+
+        List<TypeCertificate> GetAllTypeCerti();
+
+        Certificate GetCertificateByID(int id);
+
+        List<Certificate> GetCertificateByName(string name);
+
+        void InsertCertificate(Certificate certificate);
+        void UpdateCertificate(Certificate certificate);
+        void DeleteCertificate(Certificate certificate);
     }
 }
