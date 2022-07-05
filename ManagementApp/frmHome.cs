@@ -18,5 +18,56 @@ namespace ManagementApp
         {
             InitializeComponent();
         }
+
+        private void employeeManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+            frmEmployee frmemployee = new frmEmployee
+            {
+                email = email,
+                role = role
+            };
+
+            frmemployee.MdiParent = this;
+            frmemployee.Dock = DockStyle.Fill;
+            frmemployee.Show();
+        }
+
+        private void rewardAndPenaltyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+
+        }
+
+        private void departmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+        }
+
+        private void posToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+        }
+
+        private void certificateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+        }
+
+        private void regulationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+        }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+            this.IsMdiContainer = true;
+        }
     }
 }

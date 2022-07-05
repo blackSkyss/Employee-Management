@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.empToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,17 +38,6 @@
             this.regulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(422, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "HOME PAGE";
             // 
             // menuStrip1
             // 
@@ -62,7 +50,7 @@
             this.regulationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(989, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1193, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,46 +68,52 @@
             this.employeeManagementToolStripMenuItem.Name = "employeeManagementToolStripMenuItem";
             this.employeeManagementToolStripMenuItem.Size = new System.Drawing.Size(302, 34);
             this.employeeManagementToolStripMenuItem.Text = "Employee Management";
+            this.employeeManagementToolStripMenuItem.Click += new System.EventHandler(this.employeeManagementToolStripMenuItem_Click);
             // 
             // rewardAndPenaltyToolStripMenuItem
             // 
             this.rewardAndPenaltyToolStripMenuItem.Name = "rewardAndPenaltyToolStripMenuItem";
             this.rewardAndPenaltyToolStripMenuItem.Size = new System.Drawing.Size(302, 34);
             this.rewardAndPenaltyToolStripMenuItem.Text = "Reward And Penalty";
+            this.rewardAndPenaltyToolStripMenuItem.Click += new System.EventHandler(this.rewardAndPenaltyToolStripMenuItem_Click);
             // 
             // departmentToolStripMenuItem
             // 
             this.departmentToolStripMenuItem.Name = "departmentToolStripMenuItem";
             this.departmentToolStripMenuItem.Size = new System.Drawing.Size(123, 29);
             this.departmentToolStripMenuItem.Text = "Department";
+            this.departmentToolStripMenuItem.Click += new System.EventHandler(this.departmentToolStripMenuItem_Click);
             // 
             // posToolStripMenuItem
             // 
             this.posToolStripMenuItem.Name = "posToolStripMenuItem";
             this.posToolStripMenuItem.Size = new System.Drawing.Size(91, 29);
             this.posToolStripMenuItem.Text = "Position";
+            this.posToolStripMenuItem.Click += new System.EventHandler(this.posToolStripMenuItem_Click);
             // 
             // certificateToolStripMenuItem
             // 
             this.certificateToolStripMenuItem.Name = "certificateToolStripMenuItem";
             this.certificateToolStripMenuItem.Size = new System.Drawing.Size(106, 29);
             this.certificateToolStripMenuItem.Text = "Certificate";
+            this.certificateToolStripMenuItem.Click += new System.EventHandler(this.certificateToolStripMenuItem_Click);
             // 
             // regulationToolStripMenuItem
             // 
             this.regulationToolStripMenuItem.Name = "regulationToolStripMenuItem";
             this.regulationToolStripMenuItem.Size = new System.Drawing.Size(112, 29);
             this.regulationToolStripMenuItem.Text = "Regulation";
+            this.regulationToolStripMenuItem.Click += new System.EventHandler(this.regulationToolStripMenuItem_Click);
             // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(989, 540);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1193, 628);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmHome";
             this.Text = "frmHome";
+            this.Load += new System.EventHandler(this.frmHome_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -128,8 +122,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem empToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeeManagementToolStripMenuItem;
