@@ -109,6 +109,24 @@ namespace DataAccess
             return emp;
         }
 
+        //Get employee by email one-------------------------------------------------------------------
+        public static Employee GetEmployeeByEmailOne(string mail)
+        {
+            Employee emp = null;
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    emp = db.Employees.SingleOrDefault(e => e.Email.Equals(mail));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not get employee by email!!!");
+            }
+            return emp;
+        }
 
 
         //Get employee by name-----------------------------------------------------------------------

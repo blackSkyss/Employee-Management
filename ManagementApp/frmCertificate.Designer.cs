@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
@@ -42,7 +44,7 @@
             this.dtpdoi = new System.Windows.Forms.DateTimePicker();
             this.dgvcer = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbofilter = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cboType = new System.Windows.Forms.ComboBox();
             this.txtsearch = new System.Windows.Forms.TextBox();
@@ -67,8 +69,9 @@
             // 
             this.button1.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(543, 550);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.Size = new System.Drawing.Size(112, 35);
             this.button1.TabIndex = 1;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
@@ -76,9 +79,11 @@
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(302, 78);
+            this.txtid.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtid.Location = new System.Drawing.Point(302, 79);
+            this.txtid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(150, 31);
+            this.txtid.Size = new System.Drawing.Size(150, 28);
             this.txtid.TabIndex = 2;
             // 
             // label2
@@ -103,9 +108,11 @@
             // 
             // txtidemp
             // 
+            this.txtidemp.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtidemp.Location = new System.Drawing.Point(302, 129);
+            this.txtidemp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtidemp.Name = "txtidemp";
-            this.txtidemp.Size = new System.Drawing.Size(150, 31);
+            this.txtidemp.Size = new System.Drawing.Size(150, 28);
             this.txtidemp.TabIndex = 4;
             // 
             // label4
@@ -120,9 +127,11 @@
             // 
             // txtname
             // 
-            this.txtname.Location = new System.Drawing.Point(593, 78);
+            this.txtname.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtname.Location = new System.Drawing.Point(593, 79);
+            this.txtname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(150, 31);
+            this.txtname.Size = new System.Drawing.Size(150, 28);
             this.txtname.TabIndex = 6;
             // 
             // label5
@@ -137,9 +146,11 @@
             // 
             // txtidtype
             // 
+            this.txtidtype.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtidtype.Location = new System.Drawing.Point(593, 129);
+            this.txtidtype.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtidtype.Name = "txtidtype";
-            this.txtidtype.Size = new System.Drawing.Size(150, 31);
+            this.txtidtype.Size = new System.Drawing.Size(150, 28);
             this.txtidtype.TabIndex = 8;
             // 
             // label6
@@ -158,17 +169,40 @@
             this.dtpdoi.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dtpdoi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpdoi.Location = new System.Drawing.Point(861, 79);
+            this.dtpdoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpdoi.Name = "dtpdoi";
             this.dtpdoi.Size = new System.Drawing.Size(150, 28);
             this.dtpdoi.TabIndex = 12;
             // 
             // dgvcer
             // 
+            this.dgvcer.AllowUserToAddRows = false;
+            this.dgvcer.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvcer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvcer.Location = new System.Drawing.Point(68, 234);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcer.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvcer.Location = new System.Drawing.Point(68, 235);
+            this.dgvcer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvcer.MultiSelect = false;
             this.dgvcer.Name = "dgvcer";
+            this.dgvcer.ReadOnly = true;
             this.dgvcer.RowHeadersWidth = 62;
             this.dgvcer.RowTemplate.Height = 33;
+            this.dgvcer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvcer.Size = new System.Drawing.Size(981, 290);
             this.dgvcer.TabIndex = 13;
             // 
@@ -182,15 +216,16 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Filter";
             // 
-            // comboBox1
+            // cbofilter
             // 
-            this.comboBox1.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(302, 182);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 29);
-            this.comboBox1.TabIndex = 15;
-            this.comboBox1.Text = "Type";
+            this.cbofilter.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbofilter.FormattingEnabled = true;
+            this.cbofilter.Location = new System.Drawing.Point(302, 182);
+            this.cbofilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbofilter.Name = "cbofilter";
+            this.cbofilter.Size = new System.Drawing.Size(189, 29);
+            this.cbofilter.TabIndex = 15;
+            this.cbofilter.Text = "Type";
             // 
             // label8
             // 
@@ -210,23 +245,27 @@
             "ID",
             "Name"});
             this.cboType.Location = new System.Drawing.Point(593, 182);
+            this.cboType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(150, 29);
             this.cboType.TabIndex = 17;
             // 
             // txtsearch
             // 
+            this.txtsearch.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtsearch.Location = new System.Drawing.Point(774, 183);
+            this.txtsearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(150, 31);
+            this.txtsearch.Size = new System.Drawing.Size(150, 28);
             this.txtsearch.TabIndex = 18;
             // 
             // btnLoad
             // 
             this.btnLoad.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLoad.Location = new System.Drawing.Point(1057, 234);
+            this.btnLoad.Location = new System.Drawing.Point(1057, 235);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(112, 34);
+            this.btnLoad.Size = new System.Drawing.Size(112, 35);
             this.btnLoad.TabIndex = 19;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -235,21 +274,25 @@
             // 
             this.btnCreate.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCreate.Location = new System.Drawing.Point(1057, 311);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(112, 34);
+            this.btnCreate.Size = new System.Drawing.Size(112, 35);
             this.btnCreate.TabIndex = 20;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.Location = new System.Drawing.Point(1057, 385);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(112, 34);
+            this.btnDelete.Size = new System.Drawing.Size(112, 35);
             this.btnDelete.TabIndex = 21;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmCertificate
             // 
@@ -262,7 +305,7 @@
             this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.cboType);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbofilter);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dgvcer);
             this.Controls.Add(this.dtpdoi);
@@ -277,6 +320,7 @@
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCertificate";
             this.Text = "frmCertificate";
             this.Load += new System.EventHandler(this.frmCertificate_Load);
@@ -302,7 +346,7 @@
         private System.Windows.Forms.DateTimePicker dtpdoi;
         private System.Windows.Forms.DataGridView dgvcer;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbofilter;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboType;
         private System.Windows.Forms.TextBox txtsearch;

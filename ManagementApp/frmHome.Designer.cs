@@ -50,7 +50,7 @@
             this.regulationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1193, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1193, 32);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -59,49 +59,54 @@
             this.empToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.employeeManagementToolStripMenuItem,
             this.rewardAndPenaltyToolStripMenuItem});
+            this.empToolStripMenuItem.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.empToolStripMenuItem.Name = "empToolStripMenuItem";
-            this.empToolStripMenuItem.Size = new System.Drawing.Size(106, 29);
+            this.empToolStripMenuItem.Size = new System.Drawing.Size(115, 29);
             this.empToolStripMenuItem.Text = "Employee";
             // 
             // employeeManagementToolStripMenuItem
             // 
             this.employeeManagementToolStripMenuItem.Name = "employeeManagementToolStripMenuItem";
-            this.employeeManagementToolStripMenuItem.Size = new System.Drawing.Size(302, 34);
+            this.employeeManagementToolStripMenuItem.Size = new System.Drawing.Size(328, 34);
             this.employeeManagementToolStripMenuItem.Text = "Employee Management";
             this.employeeManagementToolStripMenuItem.Click += new System.EventHandler(this.employeeManagementToolStripMenuItem_Click);
             // 
             // rewardAndPenaltyToolStripMenuItem
             // 
             this.rewardAndPenaltyToolStripMenuItem.Name = "rewardAndPenaltyToolStripMenuItem";
-            this.rewardAndPenaltyToolStripMenuItem.Size = new System.Drawing.Size(302, 34);
+            this.rewardAndPenaltyToolStripMenuItem.Size = new System.Drawing.Size(328, 34);
             this.rewardAndPenaltyToolStripMenuItem.Text = "Reward And Penalty";
             this.rewardAndPenaltyToolStripMenuItem.Click += new System.EventHandler(this.rewardAndPenaltyToolStripMenuItem_Click);
             // 
             // departmentToolStripMenuItem
             // 
+            this.departmentToolStripMenuItem.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.departmentToolStripMenuItem.Name = "departmentToolStripMenuItem";
-            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(123, 29);
+            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
             this.departmentToolStripMenuItem.Text = "Department";
             this.departmentToolStripMenuItem.Click += new System.EventHandler(this.departmentToolStripMenuItem_Click);
             // 
             // posToolStripMenuItem
             // 
+            this.posToolStripMenuItem.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.posToolStripMenuItem.Name = "posToolStripMenuItem";
-            this.posToolStripMenuItem.Size = new System.Drawing.Size(91, 29);
+            this.posToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
             this.posToolStripMenuItem.Text = "Position";
             this.posToolStripMenuItem.Click += new System.EventHandler(this.posToolStripMenuItem_Click);
             // 
             // certificateToolStripMenuItem
             // 
+            this.certificateToolStripMenuItem.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.certificateToolStripMenuItem.Name = "certificateToolStripMenuItem";
-            this.certificateToolStripMenuItem.Size = new System.Drawing.Size(106, 29);
+            this.certificateToolStripMenuItem.Size = new System.Drawing.Size(128, 29);
             this.certificateToolStripMenuItem.Text = "Certificate";
             this.certificateToolStripMenuItem.Click += new System.EventHandler(this.certificateToolStripMenuItem_Click);
             // 
             // regulationToolStripMenuItem
             // 
+            this.regulationToolStripMenuItem.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.regulationToolStripMenuItem.Name = "regulationToolStripMenuItem";
-            this.regulationToolStripMenuItem.Size = new System.Drawing.Size(112, 29);
+            this.regulationToolStripMenuItem.Size = new System.Drawing.Size(129, 28);
             this.regulationToolStripMenuItem.Text = "Regulation";
             this.regulationToolStripMenuItem.Click += new System.EventHandler(this.regulationToolStripMenuItem_Click);
             // 

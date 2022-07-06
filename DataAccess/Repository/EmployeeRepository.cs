@@ -21,6 +21,8 @@ namespace DataAccess.Repository
 
         public List<Employee> GetEmployeeByEmail(string email) => EmployeeDAO.GetEmployeeByEmail(email);
 
+        public Employee GetEmployeeByEmailOne(string email) => EmployeeDAO.GetEmployeeByEmailOne(email);
+
         public Employee GetEmployeeByID(int id) => EmployeeDAO.GetEmployeeByID(id);
 
         public List<Employee> GetEmployeeByName(string name) => EmployeeDAO.GetEmployeeByName(name);

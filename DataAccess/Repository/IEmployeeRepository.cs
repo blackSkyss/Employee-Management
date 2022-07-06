@@ -15,6 +15,8 @@ namespace DataAccess.Repository
         List<Employee> SearchEmployeeByID(string id);
         List<Employee> GetEmployeeByName(string name);
         List<Employee> GetEmployeeByEmail(string email);
+
+        Employee GetEmployeeByEmailOne(string email);
         void InsertEmployee(Employee employee);
         void UpdateEmployee(Employee employee);
         void DeleteEmployee(Employee employee);

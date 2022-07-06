@@ -29,6 +29,25 @@ namespace DataAccess
             return listCer;
         }
 
+        //Get certificate by ID employee---------------------------------------------------------
+        public static List<Certificate> GetCertificateByIDEmp(int id)
+        {
+            var listCer = new List<Certificate>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listCer = db.Certificates.Where(c => c.IdEmp == id).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not find certificate by id employee!!!");
+            }
+
+            return listCer;
+        }
+
         //Get all type of certificate------------------------------------------------------------
         public static List<TypeCertificate> GetTypeCertificates()
         {

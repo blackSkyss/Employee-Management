@@ -20,5 +20,7 @@ namespace DataAccess.Repository
         void InsertCertificate(Certificate certificate);
         void UpdateCertificate(Certificate certificate);
         void DeleteCertificate(Certificate certificate);
+
+        List<Certificate> GetCertificateByIDEmp(int id);
     }
 }
