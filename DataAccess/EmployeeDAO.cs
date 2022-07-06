@@ -48,6 +48,26 @@ namespace DataAccess
             return emp;
         }
 
+        //Search employee by id--------------------------------------------------------------------
+        public static List<Employee> SearchEmployeeByID(string id)
+        {
+            var listEmp = new List<Employee>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listEmp = db.Employees.Where(e => e.IdEmp.ToString().Trim().Equals(id.Trim())).ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not find this employee by id!!!");
+            }
+
+            return listEmp;
+        }
+
         //Get employee by id-----------------------------------------------------------------------
         public static Employee GetEmployeeByID(int id)
         {
@@ -67,6 +87,29 @@ namespace DataAccess
 
             return emp;
         }
+
+
+        //Check email exist-------------------------------------------------------------------------
+        public static Employee CheckExistEmail(string email)
+        {
+            Employee emp = null;
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    emp = db.Employees.SingleOrDefault(e => e.Email.Equals(email));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not check email exist!!!");
+            }
+
+            return emp;
+        }
+
+
 
         //Get employee by name-----------------------------------------------------------------------
         public static List<Employee> GetEmployeeByName(string name)
@@ -180,6 +223,44 @@ namespace DataAccess
             {
                 throw new Exception("Can not change department");
             }
+        }
+
+        //Filter employee by department----------------------------------------------------------------------
+        public static List<Employee> FilterEmployeeByDep(int iddep)
+        {
+            var listEmp = new List<Employee>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listEmp = db.Employees.Where(e => e.DepNum == iddep).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not filter by department!!!");
+            }
+
+            return listEmp;
+        }
+
+        //Filter employee by position--------------------------------------------------------------------------
+        public static List<Employee> FilterEmployeeByPos(int idpos)
+        {
+            var listEmp = new List<Employee>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listEmp = db.Employees.Where(e => e.IdPos == idpos).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not filter by position!!!");
+            }
+
+            return listEmp;
         }
     }
 }

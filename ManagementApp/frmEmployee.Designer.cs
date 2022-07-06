@@ -356,6 +356,8 @@
             this.cbofilterdep.Size = new System.Drawing.Size(176, 29);
             this.cbofilterdep.TabIndex = 35;
             this.cbofilterdep.Text = "Department";
+            this.cbofilterdep.SelectedValueChanged += new System.EventHandler(this.cbofilterdep_SelectedValueChanged);
+            this.cbofilterdep.Click += new System.EventHandler(this.cbofilterdep_Click);
             // 
             // cbotype
             // 
@@ -375,6 +377,7 @@
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(161, 28);
             this.txtsearch.TabIndex = 37;
+            this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
             // cbofilterpos
             // 
@@ -384,6 +387,8 @@
             this.cbofilterpos.Size = new System.Drawing.Size(161, 29);
             this.cbofilterpos.TabIndex = 38;
             this.cbofilterpos.Text = "Position";
+            this.cbofilterpos.SelectedValueChanged += new System.EventHandler(this.cbofilterpos_SelectedValueChanged);
+            this.cbofilterpos.Click += new System.EventHandler(this.cbofilterpos_Click);
             // 
             // label11
             // 

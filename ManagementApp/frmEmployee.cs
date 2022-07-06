@@ -16,6 +16,11 @@ namespace ManagementApp
     public partial class frmEmployee : Form
     {
         IEmployeeRepository empRep = new EmployeeRepository();
+
+        IDepartmentRepository depRep = new DepartmentRepository();
+
+        IPositionRepository posRep = new PositionRepository();
+
         public string email { get; set; }
         public int? role { get; set; }
 
@@ -30,7 +35,7 @@ namespace ManagementApp
         {
             this.ControlBox = false;
             this.WindowState = FormWindowState.Maximized;
-            btnDelete.Enabled = false;
+
 
             txtid.Enabled = false;
             txtname.Enabled = false;
@@ -56,7 +61,12 @@ namespace ManagementApp
                 txtsearch.Enabled = false;
             }
 
+            LoadListEmployee();
+
+
             dgvemp.CellDoubleClick += Dgvemp_CellDoubleClick;
+
+
         }
 
         //Close button--------------------------------------------------------------------------
@@ -72,49 +82,7 @@ namespace ManagementApp
                 try
                 {
                     source = new BindingSource();
-                    source.DataSource = listEmp;
-                    txtid.DataBindings.Clear();
-                    txtname.DataBindings.Clear();
-                    txtaddress.DataBindings.Clear();
-                    txtgender.DataBindings.Clear();
-                    txtphone.DataBindings.Clear();
-                    dtpdob.DataBindings.Clear();
-                    dtpjoindate.DataBindings.Clear();
-                    txtemail.DataBindings.Clear();
-                    txtpassword.DataBindings.Clear();
-                    txtrole.DataBindings.Clear();
-                    txtsalary.DataBindings.Clear();
-                    txtiddep.DataBindings.Clear();
-                    txtidpos.DataBindings.Clear();
-
-
-                    txtid.DataBindings.Add("Text", source, "IdEmp");
-                    txtname.DataBindings.Add("Text", source, "Name");
-                    txtaddress.DataBindings.Add("Text", source, "Address");
-                    txtgender.DataBindings.Add("Text", source, "Gender");
-                    txtphone.DataBindings.Add("Text", source, "PhoneNum");
-                    dtpdob.DataBindings.Add("Text", source, "Dob");
-                    dtpjoindate.DataBindings.Add("Text", source, "JoinDate");
-                    txtemail.DataBindings.Add("Text", source, "Email");
-                    txtpassword.DataBindings.Add("Text", source, "Password");
-                    txtrole.DataBindings.Add("Text", source, "Role");
-                    txtsalary.DataBindings.Add("Text", source, "BaseSalary");
-                    txtiddep.DataBindings.Add("Text", source, "DepNum");
-                    txtidpos.DataBindings.Add("Text", source, "IdPos");
-
-
-                    dgvemp.DataSource = null;
-                    dgvemp.DataSource = source;
-
-                    if (listEmp.Count == 0)
-                    {
-                        btnDelete.Enabled = false;
-                    }
-                    else
-                    {
-                        btnDelete.Enabled = true;
-                    }
-
+                    Binding(listEmp);
                 }
                 catch (Exception ex)
                 {
@@ -127,39 +95,7 @@ namespace ManagementApp
                 try
                 {
                     source = new BindingSource();
-                    source.DataSource = listEmp;
-                    txtid.DataBindings.Clear();
-                    txtname.DataBindings.Clear();
-                    txtaddress.DataBindings.Clear();
-                    txtgender.DataBindings.Clear();
-                    txtphone.DataBindings.Clear();
-                    dtpdob.DataBindings.Clear();
-                    dtpjoindate.DataBindings.Clear();
-                    txtemail.DataBindings.Clear();
-                    txtpassword.DataBindings.Clear();
-                    txtrole.DataBindings.Clear();
-                    txtsalary.DataBindings.Clear();
-                    txtiddep.DataBindings.Clear();
-                    txtidpos.DataBindings.Clear();
-
-
-                    txtid.DataBindings.Add("Text", source, "IdEmp");
-                    txtname.DataBindings.Add("Text", source, "Name");
-                    txtaddress.DataBindings.Add("Text", source, "Address");
-                    txtgender.DataBindings.Add("Text", source, "Gender");
-                    txtphone.DataBindings.Add("Text", source, "PhoneNum");
-                    dtpdob.DataBindings.Add("Text", source, "Dob");
-                    dtpjoindate.DataBindings.Add("Text", source, "JoinDate");
-                    txtemail.DataBindings.Add("Text", source, "Email");
-                    txtpassword.DataBindings.Add("Text", source, "Password");
-                    txtrole.DataBindings.Add("Text", source, "Role");
-                    txtsalary.DataBindings.Add("Text", source, "BaseSalary");
-                    txtiddep.DataBindings.Add("Text", source, "DepNum");
-                    txtidpos.DataBindings.Add("Text", source, "IdPos");
-
-
-                    dgvemp.DataSource = null;
-                    dgvemp.DataSource = source;
+                    Binding(listEmp);
 
                 }
                 catch (Exception ex)
@@ -185,6 +121,8 @@ namespace ManagementApp
                 Text = "Create Employee",
                 empRep = empRep,
                 InsertOrUpdate = false,
+                depReg = depRep,
+                posReg = posRep
 
             };
 
@@ -203,7 +141,9 @@ namespace ManagementApp
                 Text = "Update Employee",
                 empRep = empRep,
                 InsertOrUpdate = true,
-                empInfo = GetEmployeeObject()
+                empInfo = GetEmployeeObject(),
+                depReg = depRep,
+                posReg = posRep
             };
 
             if (frmemployeeDetail.ShowDialog() == DialogResult.OK)
@@ -266,6 +206,219 @@ namespace ManagementApp
             }
 
             return emp;
+        }
+
+        //Load list department---------------------------------------------------------------
+        public void LoadDepartment()
+        {
+            try
+            {
+                var depList = depRep.GetAllDepartment();
+                cbofilterdep.DataSource = depList;
+                cbofilterdep.ValueMember = "DepNum";
+                cbofilterdep.DisplayMember = "DepName";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error on load list of department!!!");
+            }
+        }
+
+        //Load list position-----------------------------------------------------------------
+        public void LoadPosition()
+        {
+            try
+            {
+                var posList = posRep.GetPositions();
+                cbofilterpos.DataSource = posList;
+                cbofilterpos.ValueMember = "IdPos";
+                cbofilterpos.DisplayMember = "PosName";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error on load list of position!!!");
+            }
+        }
+
+
+        //Seleted value in combo box department----------------------------------------------------
+        private void cbofilterdep_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //ComboBox cb = (ComboBox)sender;
+            string value;
+            try
+            {
+                value = cbofilterdep.SelectedValue.ToString();
+                var listEmp = empRep.GetEmployees();
+
+                if (!String.IsNullOrEmpty(value))
+                {
+                    List<Employee> tmp = new List<Employee>();
+                    foreach (Employee emp in listEmp)
+                    {
+                        if (emp.DepNum.ToString().Trim().Equals(value.Trim()))
+                        {
+                            tmp.Add(emp);
+                        }
+                    }
+
+                    Binding(tmp);
+
+                }
+                else
+                {
+                    MessageBox.Show("Not found!!!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error");
+            }
+        }
+
+
+        //Click on combo box derpartment-----------------------------------------------------------------
+        private void cbofilterdep_Click(object sender, EventArgs e)
+        {
+            LoadDepartment();
+
+        }
+
+        //Click on combo box position-----------------------------------------------------------------
+        private void cbofilterpos_Click(object sender, EventArgs e)
+        {
+            LoadPosition();
+        }
+
+        //Seleted value in combo box position----------------------------------------------------
+        private void cbofilterpos_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //ComboBox cb = (ComboBox)sender;
+            string value;
+            try
+            {
+                value = cbofilterpos.SelectedValue.ToString();
+                var listEmp = empRep.GetEmployees();
+
+                if (!String.IsNullOrEmpty(value))
+                {
+                    List<Employee> tmp = new List<Employee>();
+                    foreach (Employee emp in listEmp)
+                    {
+                        if (emp.IdPos.ToString().Trim().Equals(value.Trim()))
+                        {
+                            tmp.Add(emp);
+                        }
+                    }
+
+                    Binding(tmp);
+                }
+                else
+                {
+                    MessageBox.Show("Not found!!!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error");
+            }
+        }
+
+        //Binding data to txt----------------------------------------------------------------
+        public void Binding(List<Employee> List)
+        {
+            source.Clear();
+            source.DataSource = List;
+            txtid.DataBindings.Clear();
+            txtname.DataBindings.Clear();
+            txtaddress.DataBindings.Clear();
+            txtgender.DataBindings.Clear();
+            txtphone.DataBindings.Clear();
+            dtpdob.DataBindings.Clear();
+            dtpjoindate.DataBindings.Clear();
+            txtemail.DataBindings.Clear();
+            txtpassword.DataBindings.Clear();
+            txtrole.DataBindings.Clear();
+            txtsalary.DataBindings.Clear();
+            txtiddep.DataBindings.Clear();
+            txtidpos.DataBindings.Clear();
+
+
+            txtid.DataBindings.Add("Text", source, "IdEmp");
+            txtname.DataBindings.Add("Text", source, "Name");
+            txtaddress.DataBindings.Add("Text", source, "Address");
+            txtgender.DataBindings.Add("Text", source, "Gender");
+            txtphone.DataBindings.Add("Text", source, "PhoneNum");
+            dtpdob.DataBindings.Add("Text", source, "Dob");
+            dtpjoindate.DataBindings.Add("Text", source, "JoinDate");
+            txtemail.DataBindings.Add("Text", source, "Email");
+            txtpassword.DataBindings.Add("Text", source, "Password");
+            txtrole.DataBindings.Add("Text", source, "Role");
+            txtsalary.DataBindings.Add("Text", source, "BaseSalary");
+            txtiddep.DataBindings.Add("Text", source, "DepNum");
+            txtidpos.DataBindings.Add("Text", source, "IdPos");
+
+            dgvemp.DataSource = null;
+            dgvemp.DataSource = source;
+
+
+            if (List.Count == 0)
+            {
+                btnDelete.Enabled = false;
+            }
+            else
+            {
+                btnDelete.Enabled = true;
+            }
+        }
+
+        private void frmEmployee_Shown(object sender, EventArgs e)
+        {
+        }
+
+        private void dgvemp_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            string value = txtsearch.Text;
+            string type = cbotype.SelectedItem.ToString();
+            try
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    var listEmp = new List<Employee>();
+                    if (type.Equals("ID"))
+                    {
+                        listEmp = empRep.SearchEmployeeByID(value);
+                    }
+                    else if (type.Equals("Name"))
+                    {
+                        listEmp = empRep.GetEmployeeByName(value);
+                    }
+                    else
+                    {
+                        listEmp = empRep.GetEmployeeByEmail(value);
+                    }
+
+                    Binding(listEmp);
+                }
+                else
+                {
+                    LoadListEmployee();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Not found");
+            }
         }
     }
 }

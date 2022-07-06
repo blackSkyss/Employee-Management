@@ -11,7 +11,13 @@ namespace DataAccess.Repository
     {
         public void ChangeDepartment(int idEmp, int depnum) => EmployeeDAO.ChangeDepartment(idEmp, depnum);
 
+        public Employee CheckEmailExist(string email) => EmployeeDAO.CheckExistEmail(email);
+
         public void DeleteEmployee(Employee employee) => EmployeeDAO.DeleteEmployee(employee);
+
+        public List<Employee> FilterEmployeeByDep(int iddep) => EmployeeDAO.FilterEmployeeByDep(iddep);
+
+        public List<Employee> FilterEmployeeByPos(int idpos) => EmployeeDAO.FilterEmployeeByPos(idpos);
 
         public List<Employee> GetEmployeeByEmail(string email) => EmployeeDAO.GetEmployeeByEmail(email);
 
@@ -25,6 +31,10 @@ namespace DataAccess.Repository
 
         public Employee Login(string email, string password) => EmployeeDAO.Login(email, password);
 
+        public List<Employee> SearchEmployeeByID(string id) => EmployeeDAO.SearchEmployeeByID(id);
+
         public void UpdateEmployee(Employee employee) => EmployeeDAO.UpdateEmployee(employee);
+
+
     }
 }

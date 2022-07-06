@@ -11,6 +11,8 @@ namespace DataAccess.Repository
     {
         List<Employee> GetEmployees();
         Employee GetEmployeeByID(int id);
+
+        List<Employee> SearchEmployeeByID(string id);
         List<Employee> GetEmployeeByName(string name);
         List<Employee> GetEmployeeByEmail(string email);
         void InsertEmployee(Employee employee);
@@ -20,5 +22,11 @@ namespace DataAccess.Repository
         void ChangeDepartment(int idEmp, int depnum);
 
         Employee Login(string email, string password);
+
+        Employee CheckEmailExist(string email);
+
+        List<Employee> FilterEmployeeByDep(int iddep);
+
+        List<Employee> FilterEmployeeByPos(int idpos);
     }
 }
