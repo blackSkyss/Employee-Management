@@ -87,6 +87,7 @@
             this.dgvemp.AllowUserToDeleteRows = false;
             this.dgvemp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvemp.Location = new System.Drawing.Point(54, 349);
+            this.dgvemp.MultiSelect = false;
             this.dgvemp.Name = "dgvemp";
             this.dgvemp.ReadOnly = true;
             this.dgvemp.RowHeadersWidth = 62;

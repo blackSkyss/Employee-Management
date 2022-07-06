@@ -88,16 +88,18 @@
             // 
             // txtid
             // 
+            this.txtid.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtid.Location = new System.Drawing.Point(200, 33);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(150, 31);
+            this.txtid.Size = new System.Drawing.Size(150, 28);
             this.txtid.TabIndex = 2;
             // 
             // txtname
             // 
+            this.txtname.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtname.Location = new System.Drawing.Point(590, 34);
             this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(150, 31);
+            this.txtname.Size = new System.Drawing.Size(150, 28);
             this.txtname.TabIndex = 5;
             // 
             // label3
@@ -138,9 +140,10 @@
             // 
             // txtaddress
             // 
+            this.txtaddress.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtaddress.Location = new System.Drawing.Point(200, 97);
             this.txtaddress.Name = "txtaddress";
-            this.txtaddress.Size = new System.Drawing.Size(150, 31);
+            this.txtaddress.Size = new System.Drawing.Size(150, 28);
             this.txtaddress.TabIndex = 8;
             // 
             // label7
@@ -181,9 +184,10 @@
             // 
             // txtphone
             // 
+            this.txtphone.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtphone.Location = new System.Drawing.Point(200, 159);
             this.txtphone.Name = "txtphone";
-            this.txtphone.Size = new System.Drawing.Size(150, 31);
+            this.txtphone.Size = new System.Drawing.Size(150, 28);
             this.txtphone.TabIndex = 14;
             // 
             // label11
@@ -206,9 +210,10 @@
             // 
             // txtemail
             // 
+            this.txtemail.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtemail.Location = new System.Drawing.Point(200, 291);
             this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(150, 31);
+            this.txtemail.Size = new System.Drawing.Size(150, 28);
             this.txtemail.TabIndex = 23;
             // 
             // label13
@@ -249,9 +254,10 @@
             // 
             // txtpassword
             // 
+            this.txtpassword.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtpassword.Location = new System.Drawing.Point(590, 292);
             this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(150, 31);
+            this.txtpassword.Size = new System.Drawing.Size(150, 28);
             this.txtpassword.TabIndex = 26;
             // 
             // label19
@@ -292,9 +298,10 @@
             // 
             // txtsalary
             // 
+            this.txtsalary.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtsalary.Location = new System.Drawing.Point(590, 225);
             this.txtsalary.Name = "txtsalary";
-            this.txtsalary.Size = new System.Drawing.Size(150, 31);
+            this.txtsalary.Size = new System.Drawing.Size(150, 28);
             this.txtsalary.TabIndex = 32;
             // 
             // label23

@@ -44,14 +44,33 @@ namespace ManagementApp
         //Load form-----------------------------------------------------------------------------
         private void frmEmployeeDetail_Load(object sender, EventArgs e)
         {
-
+            LoadDepartment();
+            LoadPosition();
             if (InsertOrUpdate == false)
             {
-                LoadDepartment();
-                LoadPosition();
+
                 cbogender.SelectedIndex = 0;
 
             }
+            else
+            {
+                txtid.Text = empInfo.IdEmp.ToString();
+                txtname.Text = empInfo.Name;
+                txtaddress.Text = empInfo.Address;
+                cbogender.SelectedIndex = cbogender.Items.IndexOf(empInfo.Gender);
+                txtphone.Text = empInfo.PhoneNum;
+                dtpdob.Text = empInfo.Dob?.ToString("MM-dd-yyyy");
+                dtpjoindate.Text = empInfo.JoinDate?.ToString("MM-dd-yyyy");
+                txtemail.Text = empInfo.Email;
+                txtpassword.Text = empInfo.Password;
+                txtsalary.Text = empInfo.BaseSalary.ToString();
+                cbodepartment.SelectedValue = empInfo.DepNum;
+                cboposition.SelectedValue = empInfo.IdPos;
+
+                txtid.Enabled = false;
+                txtemail.Enabled = false;
+            }
+
 
         }
 
