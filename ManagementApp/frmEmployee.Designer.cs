@@ -83,11 +83,15 @@
             // 
             // dgvemp
             // 
+            this.dgvemp.AllowUserToAddRows = false;
+            this.dgvemp.AllowUserToDeleteRows = false;
             this.dgvemp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvemp.Location = new System.Drawing.Point(54, 349);
             this.dgvemp.Name = "dgvemp";
+            this.dgvemp.ReadOnly = true;
             this.dgvemp.RowHeadersWidth = 62;
             this.dgvemp.RowTemplate.Height = 33;
+            this.dgvemp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvemp.Size = new System.Drawing.Size(998, 195);
             this.dgvemp.TabIndex = 1;
             // 
@@ -239,6 +243,7 @@
             this.btnLoad.TabIndex = 21;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnCreate
             // 
@@ -248,6 +253,7 @@
             this.btnCreate.TabIndex = 22;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnDelete
             // 
@@ -257,6 +263,7 @@
             this.btnDelete.TabIndex = 23;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dtpdob
             // 

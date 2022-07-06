@@ -27,9 +27,16 @@ namespace BusinessObject
         public int? DepNum { get; set; }
         public int? IdPos { get; set; }
 
+        [System.ComponentModel.Browsable(false)]
         public virtual Department DepNumNavigation { get; set; }
+
+        [System.ComponentModel.Browsable(false)]
         public virtual Position IdPosNavigation { get; set; }
+
+        [System.ComponentModel.Browsable(false)]
         public virtual ICollection<Certificate> Certificates { get; set; }
+
+        [System.ComponentModel.Browsable(false)]
         public virtual ICollection<RewardAndPenalty> RewardAndPenalties { get; set; }
     }
 }

@@ -112,6 +112,7 @@
             this.ClientSize = new System.Drawing.Size(1193, 628);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmHome";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHome";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHome_FormClosing);
             this.Load += new System.EventHandler(this.frmHome_Load);
