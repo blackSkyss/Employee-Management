@@ -161,5 +161,43 @@ namespace DataAccess
                 throw new Exception("Can not delete certificate!!!");
             }
         }
+
+        //Search certificate by id-------------------------------------------------------------------------
+        public static List<Certificate> SearchCertificateByID(string id)
+        {
+            var listCer = new List<Certificate>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listCer = db.Certificates.Where(c => c.CerId.ToString().Trim().Equals(id.Trim())).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not search this certificate by id!!!");
+            }
+
+            return listCer;
+        }
+
+        //Filter certificate by id type certificate-----------------------------------------------------------
+        public static List<Certificate> FilterCertificateByIDType(string id)
+        {
+            var listCer = new List<Certificate>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listCer = db.Certificates.Where(c => c.IdTypeCer.ToString().Trim().Equals(id.Trim())).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not filter certificate by id type!!!");
+            }
+
+            return listCer;
+        }
     }
 }

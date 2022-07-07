@@ -215,5 +215,68 @@ namespace ManagementApp
 
             }
         }
+
+
+        //Click combo box to show list of type certificate -----------------------------------------------------
+        private void cbofilter_Click(object sender, EventArgs e)
+        {
+            LoadTypeCer();
+        }
+
+
+        //Select value in combo box to filter--------------------------------------------------------------------
+        private void cbofilter_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string value;
+            try
+            {
+                value = cbofilter.SelectedValue.ToString();
+                if (!String.IsNullOrEmpty(value))
+                {
+                    List<Certificate> listCer = cerRep.FilterCertificateByIDType(value);
+                    Binding(listCer);
+                }
+                else
+                {
+                    MessageBox.Show("Not found!!!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error");
+            }
+        }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+            string value = txtsearch.Text;
+            string type = cboType.SelectedItem.ToString();
+            try
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    var listCer = new List<Certificate>();
+                    if (type.Equals("ID"))
+                    {
+                        listCer = cerRep.SearchCertificateByID(value);
+                    }
+                    else
+                    {
+                        listCer = cerRep.GetCertificateByName(value);
+                    }
+
+                    Binding(listCer);
+                }
+                else
+                {
+                    LoadListCertificate();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Not found");
+            }
+        }
     }
 }

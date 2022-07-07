@@ -22,5 +22,9 @@ namespace DataAccess.Repository
         void DeleteCertificate(Certificate certificate);
 
         List<Certificate> GetCertificateByIDEmp(int id);
+
+        List<Certificate> SearchCertificateByID(string id);
+
+        List<Certificate> FilterCertificateByIDType(string id);
     }
 }

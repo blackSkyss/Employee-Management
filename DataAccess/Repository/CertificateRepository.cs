@@ -21,6 +21,10 @@ namespace DataAccess.Repository
         public List<Certificate> GetCertificateByName(string name) => CertificateDAO.GetCertificateByName(name);
         public void InsertCertificate(Certificate certificate) => CertificateDAO.InsertCertificate(certificate);
 
+        public List<Certificate> SearchCertificateByID(string id) => CertificateDAO.SearchCertificateByID(id);
+
+        public List<Certificate> FilterCertificateByIDType(string id) => CertificateDAO.FilterCertificateByIDType(id);
+
         public void UpdateCertificate(Certificate certificate) => CertificateDAO.UpdateCertificate(certificate);
     }
 }

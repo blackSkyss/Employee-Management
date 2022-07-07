@@ -226,6 +226,8 @@
             this.cbofilter.Size = new System.Drawing.Size(189, 29);
             this.cbofilter.TabIndex = 15;
             this.cbofilter.Text = "Type";
+            this.cbofilter.SelectedValueChanged += new System.EventHandler(this.cbofilter_SelectedValueChanged);
+            this.cbofilter.Click += new System.EventHandler(this.cbofilter_Click);
             // 
             // label8
             // 
@@ -258,6 +260,7 @@
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.Size = new System.Drawing.Size(150, 28);
             this.txtsearch.TabIndex = 18;
+            this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
             // btnLoad
             // 

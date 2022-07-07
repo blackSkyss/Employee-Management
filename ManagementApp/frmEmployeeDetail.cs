@@ -59,11 +59,11 @@ namespace ManagementApp
         //Save button--------------------------------------------------------------------------
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtid.Text == ""
+            if (txtid.Text.ToString() == ""
                || txtname.Text == ""
                || txtaddress.Text == ""
                || txtphone.Text == ""
-               || txtsalary.Text == ""
+               || txtsalary.Text.ToString() == ""
                || txtemail.Text == ""
                || txtpassword.Text == "")
             {
