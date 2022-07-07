@@ -25,6 +25,10 @@ namespace ManagementApp
 
         public Certificate cerInfo { get; set; }
 
+        public string email { get; set; }
+
+        public int? role { get; set; }
+
         public frmCertificateDetail()
         {
             InitializeComponent();
@@ -71,8 +75,17 @@ namespace ManagementApp
 
             if (InsertOrUpdate == false)
             {
+
                 cboemployee.SelectedIndex = 0;
                 cbotype.SelectedIndex = 0;
+
+                if (role == 0)
+                {
+                    var emp = empRep.GetEmployeeByEmailOne(email);
+                    cboemployee.SelectedValue = emp.IdEmp;
+                    cboemployee.Enabled = false;
+                }
+
             }
             else
             {
@@ -83,6 +96,13 @@ namespace ManagementApp
                 cbotype.SelectedValue = cerInfo.IdTypeCer;
 
                 txtid.Enabled = false;
+
+                if (role == 0)
+                {
+                    var emp = empRep.GetEmployeeByEmailOne(email);
+                    cboemployee.SelectedValue = emp.IdEmp;
+                    cboemployee.Enabled = false;
+                }
             }
         }
 

@@ -47,7 +47,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.fdgdfg = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dtpdob = new System.Windows.Forms.DateTimePicker();
@@ -236,19 +235,9 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(1058, 349);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(112, 34);
-            this.btnLoad.TabIndex = 21;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
-            // 
             // btnCreate
             // 
-            this.btnCreate.Location = new System.Drawing.Point(1058, 406);
+            this.btnCreate.Location = new System.Drawing.Point(1058, 349);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(112, 34);
             this.btnCreate.TabIndex = 22;
@@ -258,7 +247,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(1058, 464);
+            this.btnDelete.Location = new System.Drawing.Point(1058, 404);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(112, 34);
             this.btnDelete.TabIndex = 23;
@@ -431,7 +420,6 @@
             this.Controls.Add(this.dtpdob);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCreate);
-            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.txtaddress);
@@ -483,7 +471,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label fdgdfg;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DateTimePicker dtpdob;

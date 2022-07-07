@@ -124,6 +124,7 @@ namespace ManagementApp
             }
             else
             {
+
                 btnDelete.Enabled = true;
             }
         }
@@ -135,18 +136,41 @@ namespace ManagementApp
         //Create button------------------------------------------------------------------------------
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            frmCertificateDetail frmcertificateDetail = new frmCertificateDetail
+            if (role == 1)
             {
-                Text = "Create certificate",
-                empRep = empRep,
-                cerRep = cerRep,
-                InsertOrUpdate = false
-            };
+                frmCertificateDetail frmcertificateDetail = new frmCertificateDetail
+                {
+                    Text = "Create certificate",
+                    empRep = empRep,
+                    cerRep = cerRep,
+                    InsertOrUpdate = false
+                };
 
-            if (frmcertificateDetail.ShowDialog() == DialogResult.OK)
+
+                if (frmcertificateDetail.ShowDialog() == DialogResult.OK)
+                {
+                    LoadListCertificate();
+                    source.Position = source.Count - 1;
+                }
+
+            }
+            else
             {
-                LoadListCertificate();
-                source.Position = source.Count - 1;
+                frmCertificateDetail frmcertificateDetail = new frmCertificateDetail
+                {
+                    Text = "Create certificate",
+                    empRep = empRep,
+                    cerRep = cerRep,
+                    InsertOrUpdate = false,
+                    email = email,
+                    role = role
+                };
+
+                if (frmcertificateDetail.ShowDialog() == DialogResult.OK)
+                {
+                    LoadListCertificate();
+                    source.Position = source.Count - 1;
+                }
             }
 
         }
@@ -154,20 +178,44 @@ namespace ManagementApp
         //Cell double click to update certificate-----------------------------------------------------
         public void Dgvcer_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmCertificateDetail frmcertificateDetail = new frmCertificateDetail
-            {
-                Text = "Update certificate",
-                empRep = empRep,
-                cerRep = cerRep,
-                cerInfo = GetObjectCertificate(),
-                InsertOrUpdate = true
-            };
 
-            if (frmcertificateDetail.ShowDialog() == DialogResult.OK)
+            if (role == 1)
             {
-                LoadListCertificate();
-                source.Position = source.Count - 1;
+                frmCertificateDetail frmcertificateDetail = new frmCertificateDetail
+                {
+                    Text = "Update certificate",
+                    empRep = empRep,
+                    cerRep = cerRep,
+                    cerInfo = GetObjectCertificate(),
+                    InsertOrUpdate = true
+                };
+
+                if (frmcertificateDetail.ShowDialog() == DialogResult.OK)
+                {
+                    LoadListCertificate();
+                    source.Position = source.Count - 1;
+                }
             }
+            else
+            {
+                frmCertificateDetail frmcertificateDetail = new frmCertificateDetail
+                {
+                    Text = "Update certificate",
+                    empRep = empRep,
+                    cerRep = cerRep,
+                    cerInfo = GetObjectCertificate(),
+                    InsertOrUpdate = true,
+                    email = email,
+                    role = role
+                };
+
+                if (frmcertificateDetail.ShowDialog() == DialogResult.OK)
+                {
+                    LoadListCertificate();
+                    source.Position = source.Count - 1;
+                }
+            }
+
         }
 
         //Get object certificate---------------------------------------------------------------------

@@ -53,15 +53,20 @@ namespace ManagementApp
 
             cbotype.SelectedIndex = 0;
 
+            LoadListEmployee();
+
             if (role == 0)
             {
                 cbofilterdep.Enabled = false;
                 cbofilterpos.Enabled = false;
                 cbotype.Enabled = false;
                 txtsearch.Enabled = false;
+
+                btnCreate.Enabled = false;
+                btnDelete.Enabled = false;
             }
 
-            LoadListEmployee();
+
 
 
             dgvemp.CellDoubleClick += Dgvemp_CellDoubleClick;
@@ -108,8 +113,7 @@ namespace ManagementApp
 
         //Load button---------------------------------------------------------------------------
         private void btnLoad_Click(object sender, EventArgs e)
-        {
-            LoadListEmployee();
+        {   
         }
 
 
@@ -372,7 +376,10 @@ namespace ManagementApp
             }
             else
             {
-                btnDelete.Enabled = true;
+                if(role == 1)
+                {
+                    btnDelete.Enabled = true;
+                }
             }
         }
 

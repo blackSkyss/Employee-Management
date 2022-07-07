@@ -107,6 +107,12 @@ namespace ManagementApp
         private void frmHome_Load(object sender, EventArgs e)
         {
             this.IsMdiContainer = true;
+            if (role == 0)
+            {
+                departmentToolStripMenuItem.Enabled = false;
+                posToolStripMenuItem.Enabled = false;
+                regulationToolStripMenuItem.Enabled = false;
+            }
         }
 
         private void frmHome_FormClosing(object sender, FormClosingEventArgs e)
