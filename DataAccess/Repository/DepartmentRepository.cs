@@ -19,6 +19,8 @@ namespace DataAccess.Repository
 
         public void InsertDepartment(Department department) => DepartmentDAO.InsertDepartment(department);
 
+        public List<Department> SearchDepartmentByID(string id) => DepartmentDAO.SearchDepartmentByID(id);
+
         public void UpdateDepartment(Department department) => DepartmentDAO.UpdateDepartment(department);
     }
 }

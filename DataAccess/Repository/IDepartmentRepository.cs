@@ -11,6 +11,8 @@ namespace DataAccess.Repository
     {
         List<Department> GetAllDepartment();
         Department GetDepartmentByID(int id);
+
+        List<Department> SearchDepartmentByID(string id);
         List<Department> GetDepartmentByName(string name);
         void InsertDepartment(Department department);
         void UpdateDepartment(Department department);

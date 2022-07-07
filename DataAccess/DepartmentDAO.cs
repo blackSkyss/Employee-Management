@@ -69,6 +69,25 @@ namespace DataAccess
             return listDep;
         }
 
+        //Search department by id--------------------------------------------------------------------
+        public static List<Department> SearchDepartmentByID(string id)
+        {
+            var listDep = new List<Department>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listDep = db.Departments.Where(d => d.DepNum.ToString().Trim().Equals(id.Trim())).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not search this department by id!!!");
+            }
+
+            return listDep;
+        }
+
         //Create department---------------------------------------------------------------------------
         public static void InsertDepartment(Department d)
         {
