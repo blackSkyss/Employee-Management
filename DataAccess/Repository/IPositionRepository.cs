@@ -10,5 +10,14 @@ namespace DataAccess.Repository
     public interface IPositionRepository
     {
         List<Position> GetPositions();
+
+        Position GetPositionByID(int id);
+
+        List<Position> GetPositionByName(string name);
+        void InsertCertificate(Position p);
+        void UpdateCertificate(Position p);
+        void DeletePosition(Position p);
+        Position GetPosByID(int id);
+
     }
 }
