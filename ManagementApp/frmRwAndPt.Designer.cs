@@ -193,9 +193,12 @@
             // 
             // dgvRP
             // 
+            this.dgvRP.AllowUserToAddRows = false;
+            this.dgvRP.AllowUserToDeleteRows = false;
             this.dgvRP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRP.Location = new System.Drawing.Point(137, 160);
             this.dgvRP.Name = "dgvRP";
+            this.dgvRP.ReadOnly = true;
             this.dgvRP.RowTemplate.Height = 25;
             this.dgvRP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRP.Size = new System.Drawing.Size(536, 150);

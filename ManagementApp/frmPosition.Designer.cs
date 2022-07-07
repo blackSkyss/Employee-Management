@@ -147,9 +147,12 @@
             // 
             // dgvPosition
             // 
+            this.dgvPosition.AllowUserToAddRows = false;
+            this.dgvPosition.AllowUserToDeleteRows = false;
             this.dgvPosition.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPosition.Location = new System.Drawing.Point(180, 184);
             this.dgvPosition.Name = "dgvPosition";
+            this.dgvPosition.ReadOnly = true;
             this.dgvPosition.RowTemplate.Height = 25;
             this.dgvPosition.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPosition.Size = new System.Drawing.Size(489, 129);

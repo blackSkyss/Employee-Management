@@ -158,7 +158,7 @@ namespace ManagementApp
                                 if (RPrepo.GetRewardAndPenaltyByID(int.Parse(txtIDRP.Text)) != null)
                                 {
                                     MessageBox.Show("ID already exist", "Execution results", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                }                              
+                                }
                                 else
                                 {
                                     this.DialogResult = DialogResult.OK;
@@ -181,5 +181,8 @@ namespace ManagementApp
                 }
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e) => Close();
+
     }
 }
