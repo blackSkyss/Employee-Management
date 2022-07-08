@@ -96,5 +96,26 @@ namespace DataAccess
             }
             return rp;
         }
+
+        
+
+        public static List<RewardAndPenalty> SearchRPByID(string id)
+        {
+            var listRP = new List<RewardAndPenalty>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listRP = db.RewardAndPenalties.Where(e => e.IdRp.ToString().Contains(id)).ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not find this RP by id!!!");
+            }
+
+            return listRP;
+        }
     }
 }

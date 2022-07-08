@@ -164,5 +164,32 @@ namespace ManagementApp
                 source.Position = source.Count - 1;
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string value = txtSearch.Text;
+            string type = cboType.SelectedItem.ToString();
+            try
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    var listRP = new List<RewardAndPenalty>();
+                    if (type.Equals("ID"))
+                    {
+                        listRP = RPRepo.SearchRewardAndPenaltyById(value);
+                    }
+
+                    Binding(listRP);
+                }
+                else
+                {
+                    loadRP();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Not found");
+            }
+        }
     }
 }

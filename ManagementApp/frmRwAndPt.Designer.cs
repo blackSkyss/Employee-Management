@@ -44,10 +44,12 @@
             this.txtIDRegulation = new System.Windows.Forms.TextBox();
             this.txtEmployee = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvRP = new System.Windows.Forms.DataGridView();
             this.dtpAppDate = new System.Windows.Forms.DateTimePicker();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.cboType = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRP)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,7 +180,7 @@
             // btnCreate
             // 
             this.btnCreate.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCreate.Location = new System.Drawing.Point(709, 179);
+            this.btnCreate.Location = new System.Drawing.Point(678, 210);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
             this.btnCreate.TabIndex = 14;
@@ -186,20 +188,10 @@
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // btnLoad
-            // 
-            this.btnLoad.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLoad.Location = new System.Drawing.Point(709, 222);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(75, 23);
-            this.btnLoad.TabIndex = 15;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(709, 268);
+            this.btnDelete.Location = new System.Drawing.Point(678, 249);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 16;
@@ -220,7 +212,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvRP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRP.Location = new System.Drawing.Point(137, 160);
+            this.dgvRP.Location = new System.Drawing.Point(22, 145);
             this.dgvRP.Name = "dgvRP";
             this.dgvRP.ReadOnly = true;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -241,15 +233,48 @@
             this.dtpAppDate.Size = new System.Drawing.Size(100, 21);
             this.dtpAppDate.TabIndex = 18;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtSearch.Location = new System.Drawing.Point(715, 157);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 21);
+            this.txtSearch.TabIndex = 19;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // cboType
+            // 
+            this.cboType.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cboType.FormattingEnabled = true;
+            this.cboType.Items.AddRange(new object[] {
+            "ID"});
+            this.cboType.Location = new System.Drawing.Point(640, 157);
+            this.cboType.Name = "cboType";
+            this.cboType.Size = new System.Drawing.Size(69, 22);
+            this.cboType.TabIndex = 20;
+            this.cboType.Text = "ID";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(583, 166);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 14);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Search";
+            // 
             // frmRwAndPt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 358);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cboType);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dtpAppDate);
             this.Controls.Add(this.dgvRP);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.txtEmployee);
             this.Controls.Add(this.txtIDRegulation);
@@ -290,9 +315,11 @@
         private System.Windows.Forms.TextBox txtIDRegulation;
         private System.Windows.Forms.TextBox txtEmployee;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvRP;
         private System.Windows.Forms.DateTimePicker dtpAppDate;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.ComboBox cboType;
+        private System.Windows.Forms.Label label8;
     }
 }

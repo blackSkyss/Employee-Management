@@ -25,8 +25,10 @@ namespace DataAccess.Repository
 
         public void InsertRewardAndPenalty(RewardAndPenalty p) => RewardAndPenaltyDAO.InsertRP(p);
 
+        public List<RewardAndPenalty> SearchRewardAndPenaltyById(string id) => RewardAndPenaltyDAO.SearchRPByID(id);
 
-        public void UpdateRewardAndPenalty(RewardAndPenalty p)=> RewardAndPenaltyDAO.UpdateRP(p);
-        
+
+        public void UpdateRewardAndPenalty(RewardAndPenalty p) => RewardAndPenaltyDAO.UpdateRP(p);
+
     }
 }

@@ -14,6 +14,7 @@ namespace DataAccess.Repository
         Position GetPositionByID(int id);
 
         List<Position> GetPositionByName(string name);
+        List<Position> SearchPositionByID(string id);
         void InsertCertificate(Position p);
         void UpdateCertificate(Position p);
         void DeletePosition(Position p);

@@ -97,5 +97,69 @@ namespace DataAccess
             }
             return reg;
         }
+
+        public static List<Regulation> GetRegulationByName(string name)
+        {
+            var listReg = new List<Regulation>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listReg = db.Regulations.Where(e => e.Name.ToLower().Contains(name.ToLower())).ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not find this Regulation by name!!!");
+            }
+
+            return listReg;
+        }
+
+        public static List<Regulation> SearchPositionByID(string id)
+        {
+            var listReg = new List<Regulation>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listReg = db.Regulations.Where(e => e.IdReg.ToString().Contains(id)).ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not find this Regulation by id!!!");
+            }
+
+            return listReg;
+        }
+
+        public static List<Regulation> FilterRegByStatus(string status)
+        {
+            var listReg = new List<Regulation>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    if (status.Equals("Reward"))
+                    {
+                        listReg = db.Regulations.Where(c => c.Status == 1).ToList();
+                    }
+                    else
+                    {
+                        listReg = db.Regulations.Where(c => c.Status == 0).ToList();
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not filter Regulation by id type!!!");
+            }
+
+            return listReg;
+        }
     }
 }

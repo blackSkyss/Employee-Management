@@ -40,8 +40,12 @@
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.dgvRegulation = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.cboType = new System.Windows.Forms.ComboBox();
+            this.cboFilterStatus = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegulation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,7 +130,7 @@
             // btnCreate
             // 
             this.btnCreate.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCreate.Location = new System.Drawing.Point(166, 277);
+            this.btnCreate.Location = new System.Drawing.Point(480, 277);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
             this.btnCreate.TabIndex = 8;
@@ -137,24 +141,13 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(359, 277);
+            this.btnDelete.Location = new System.Drawing.Point(608, 277);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLoad.Location = new System.Drawing.Point(540, 277);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(75, 23);
-            this.btnLoad.TabIndex = 10;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // dgvRegulation
             // 
@@ -186,13 +179,74 @@
             this.dgvRegulation.TabIndex = 11;
             this.dgvRegulation.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegulation_CellDoubleClick);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(79, 242);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 14);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Search";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtSearch.Location = new System.Drawing.Point(280, 238);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 21);
+            this.txtSearch.TabIndex = 13;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // cboType
+            // 
+            this.cboType.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cboType.FormattingEnabled = true;
+            this.cboType.Items.AddRange(new object[] {
+            "ID",
+            "Name"});
+            this.cboType.Location = new System.Drawing.Point(153, 238);
+            this.cboType.Name = "cboType";
+            this.cboType.Size = new System.Drawing.Size(121, 22);
+            this.cboType.TabIndex = 14;
+            this.cboType.Text = "ID";
+            // 
+            // cboFilterStatus
+            // 
+            this.cboFilterStatus.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cboFilterStatus.FormattingEnabled = true;
+            this.cboFilterStatus.Items.AddRange(new object[] {
+            "Reward",
+            "Penalty"});
+            this.cboFilterStatus.Location = new System.Drawing.Point(153, 269);
+            this.cboFilterStatus.Name = "cboFilterStatus";
+            this.cboFilterStatus.Size = new System.Drawing.Size(121, 22);
+            this.cboFilterStatus.TabIndex = 15;
+            this.cboFilterStatus.Text = "Type";
+            this.cboFilterStatus.SelectedValueChanged += new System.EventHandler(this.cboFilterStatus_SelectedValueChanged);
+         
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(79, 277);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(41, 14);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Filter";
+            // 
             // frmRegulation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 358);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cboFilterStatus);
+            this.Controls.Add(this.cboType);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvRegulation);
-            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.txtStatus);
@@ -225,7 +279,11 @@
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.DataGridView dgvRegulation;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.ComboBox cboType;
+        private System.Windows.Forms.ComboBox cboFilterStatus;
+        private System.Windows.Forms.Label label6;
     }
 }

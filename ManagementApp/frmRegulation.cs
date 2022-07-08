@@ -23,7 +23,9 @@ namespace ManagementApp
 
         private void frmRegulation_Load(object sender, EventArgs e)
         {
-
+            txtIDReg.Enabled = false;
+            txtName.Enabled = false;
+            txtStatus.Enabled = false;
             this.ControlBox = false;
             this.WindowState = FormWindowState.Maximized;
             loadReg();
@@ -43,6 +45,8 @@ namespace ManagementApp
                 MessageBox.Show(ex.Message, "Load list certificate!!!");
             }
         }
+
+        
 
         private void btnClose_Click(object sender, EventArgs e) => Close();
 
@@ -83,10 +87,7 @@ namespace ManagementApp
             }
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
@@ -148,5 +149,61 @@ namespace ManagementApp
             }
             return reg;
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string value = txtSearch.Text;
+            string type = cboType.SelectedItem.ToString();
+            try
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    var listReg = new List<Regulation>();
+                    if (type.Equals("ID"))
+                    {
+                        listReg = regRepo.SearchRegulationById(value);
+                    }
+                    else
+                    {
+                        listReg = regRepo.GetRegulationByName(value);
+                    }
+
+                    Binding(listReg);
+                }
+                else
+                {
+                    loadReg();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Not found");
+            }
+        }
+
+        private void cboFilterStatus_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string value;
+            try
+            {
+                value = cboFilterStatus.Text;
+                if (!String.IsNullOrEmpty(value))
+                {
+                    List<Regulation> listReg = regRepo.FilterRegByStatus(value);
+                    Binding(listReg);
+                }
+                else
+                {
+                    MessageBox.Show("Not found!!!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("error");
+            }
+        }
+
+        
     }
 }

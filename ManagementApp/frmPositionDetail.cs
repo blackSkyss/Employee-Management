@@ -26,8 +26,10 @@ namespace ManagementApp
 
         private void frmPositionDetail_Load(object sender, EventArgs e)
         {
+
             if (InsertOrUpdate == true)
             {
+                txtPosId.Enabled = false;
                 txtPosId.Text = posInfo.IdPos.ToString();
                 txtPosName.Text = posInfo.PosName.ToString();
                 txtDes.Text = posInfo.Description.ToString();

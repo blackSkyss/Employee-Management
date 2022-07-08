@@ -23,7 +23,9 @@ namespace ManagementApp
 
         private void frmPosition_Load(object sender, EventArgs e)
         {
-
+            txtIdPosition.Enabled = false;
+            txtPosDescription.Enabled = false;
+            txtPosName.Enabled = false;
             this.ControlBox = false;
             this.WindowState = FormWindowState.Maximized;
             loadPosition();
@@ -153,6 +155,43 @@ namespace ManagementApp
             {
                 MessageBox.Show(ex.Message, "Delete a position!!!");
 
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string value = txtSearch.Text;
+            string type = cboType.SelectedItem.ToString();
+            try
+            {
+
+                if (!string.IsNullOrEmpty(value))
+                {
+                    var listPos = new List<Position>();
+                    if (type.Equals("ID"))
+                    {
+                        listPos = posRepo.SearchPositionByID(value);
+                    }
+                    else
+                    {
+                        listPos = posRepo.GetPositionByName(value);
+                    }
+                    if (type.Equals(""))
+                    {
+                        MessageBox.Show("YOU NEED SELECT TYPE");
+                    }
+
+                    Binding(listPos);
+                }
+                else
+                {
+                    loadPosition();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Not found");
             }
         }
     }

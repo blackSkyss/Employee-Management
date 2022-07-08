@@ -82,7 +82,7 @@ namespace ManagementApp
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add new position" : "Update position");
+                    MessageBox.Show(ex.Message, InsertOrUpdate == false ? "Add new Regulation" : "Update Regulation");
                 }
             }
         }
@@ -91,6 +91,7 @@ namespace ManagementApp
         {
             if (InsertOrUpdate == true)
             {
+                txtIDReg.Enabled = false;
                 txtIDReg.Text = regInfo.IdReg.ToString();
                 txtName.Text = regInfo.Name.ToString();
                 txtStatus.Text = regInfo.Status.ToString();

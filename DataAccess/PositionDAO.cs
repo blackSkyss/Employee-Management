@@ -97,5 +97,43 @@ namespace DataAccess
             }
             return pos;
         }
+
+        public static List<Position> GetPositionByName(string name)
+        {
+            var listPos = new List<Position>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listPos = db.Positions.Where(e => e.PosName.ToLower().Contains(name.ToLower())).ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not find this Position by name!!!");
+            }
+
+            return listPos;
+        }
+
+        public static List<Position> SearchPositionByID(string id)
+        {
+            var listPos = new List<Position>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listPos = db.Positions.Where(e => e.IdPos.ToString().Contains(id)).ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not find this Position by id!!!");
+            }
+
+            return listPos;
+        }
     }
 }
