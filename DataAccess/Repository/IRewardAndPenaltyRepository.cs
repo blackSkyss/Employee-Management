@@ -13,6 +13,9 @@ namespace DataAccess.Repository
         RewardAndPenalty GetRewardAndPenaltyByID(int id);
 
         List<RewardAndPenalty> GetRewardAndPenaltyByName(string name);
+
+        List<RewardAndPenalty> GetRewardAndPenaltieByIDEmp(int id);
+
         void InsertRewardAndPenalty(RewardAndPenalty p);
         void UpdateRewardAndPenalty(RewardAndPenalty p);
         void DeleteRewardAndPenalty(RewardAndPenalty p);

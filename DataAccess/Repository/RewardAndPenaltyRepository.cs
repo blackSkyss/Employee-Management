@@ -11,6 +11,7 @@ namespace DataAccess.Repository
     {
         public void DeleteRewardAndPenalty(RewardAndPenalty p) => RewardAndPenaltyDAO.DeleteRP(p);
 
+        public List<RewardAndPenalty> GetRewardAndPenaltieByIDEmp(int id) => RewardAndPenaltyDAO.GetRewardAndPenaltieByIDEmp(id);
 
         public List<RewardAndPenalty> GetRewardAndPenalty() => RewardAndPenaltyDAO.GetRP();
 
@@ -23,10 +24,12 @@ namespace DataAccess.Repository
             throw new NotImplementedException();
         }
 
+
+
         public void InsertRewardAndPenalty(RewardAndPenalty p) => RewardAndPenaltyDAO.InsertRP(p);
 
 
-        public void UpdateRewardAndPenalty(RewardAndPenalty p)=> RewardAndPenaltyDAO.UpdateRP(p);
-        
+        public void UpdateRewardAndPenalty(RewardAndPenalty p) => RewardAndPenaltyDAO.UpdateRP(p);
+
     }
 }

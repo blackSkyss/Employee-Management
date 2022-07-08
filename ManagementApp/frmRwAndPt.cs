@@ -19,6 +19,9 @@ namespace ManagementApp
         IEmployeeRepository empRepo = new EmployeeRepository();
         IRewardAndPenaltyRepository RPRepo = new RewardAndPenaltyRepository();
         BindingSource source;
+
+        public string email { get; set; }
+        public int? role { get; set; }
         public frmRwAndPt()
         {
             InitializeComponent();
@@ -49,7 +52,10 @@ namespace ManagementApp
             }
             else
             {
-                btnDelete.Enabled = true;
+                if (role == 1)
+                {
+                    btnDelete.Enabled = true;
+                }
             }
         }
 
@@ -66,21 +72,46 @@ namespace ManagementApp
             this.ControlBox = false;
             this.WindowState = FormWindowState.Maximized;
             loadRP();
+
+            if (role == 0)
+            {
+                btnDelete.Enabled = false;
+                btnCreate.Enabled = false;
+            }
         }
 
         public void loadRP()
         {
-            var listRP = RPRepo.GetRewardAndPenalty();
-            try
+            if (role == 1)
             {
-                source = new BindingSource();
-                Binding(listRP);
+                var listRP = RPRepo.GetRewardAndPenalty();
+                try
+                {
+                    source = new BindingSource();
+                    Binding(listRP);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Load list RP!!!");
+                }
+            }
+            else
+            {
+                var listRP = RPRepo.GetRewardAndPenaltieByIDEmp(empRepo.GetEmployeeByEmailOne(email).IdEmp);
+                try
+                {
+                    source = new BindingSource();
+                    Binding(listRP);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Load list RP!!!");
+                }
 
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Load list RP!!!");
-            }
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -148,20 +179,23 @@ namespace ManagementApp
 
         private void dgvRP_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmRwAndPtDetail frmRwAndPtDetail = new frmRwAndPtDetail
+            if (role == 1)
             {
-                Text = "Create RP",
-                empRepo = empRepo,
-                regRepo = regRepo,
-                RPrepo = RPRepo,
-                RPInfo = GetObjectRP(),
-                InsertOrUpdate = true
-            };
+                frmRwAndPtDetail frmRwAndPtDetail = new frmRwAndPtDetail
+                {
+                    Text = "Create RP",
+                    empRepo = empRepo,
+                    regRepo = regRepo,
+                    RPrepo = RPRepo,
+                    RPInfo = GetObjectRP(),
+                    InsertOrUpdate = true
+                };
 
-            if (frmRwAndPtDetail.ShowDialog() == DialogResult.OK)
-            {
-                loadRP();
-                source.Position = source.Count - 1;
+                if (frmRwAndPtDetail.ShowDialog() == DialogResult.OK)
+                {
+                    loadRP();
+                    source.Position = source.Count - 1;
+                }
             }
         }
     }
