@@ -79,7 +79,7 @@ namespace DataAccess
             }
         }
 
-       public static RewardAndPenalty GetRewardAndPenaltyByID(int id)
+        public static RewardAndPenalty GetRewardAndPenaltyByID(int id)
         {
             var rp = new RewardAndPenalty();
             try
@@ -97,7 +97,8 @@ namespace DataAccess
             return rp;
         }
 
-        
+
+
 
         public static List<RewardAndPenalty> SearchRPByID(string id)
         {
@@ -106,16 +107,43 @@ namespace DataAccess
             {
                 using (var db = new PRN211Context())
                 {
+
                     listRP = db.RewardAndPenalties.Where(e => e.IdRp.ToString().Contains(id)).ToList();
+
+
                 }
 
             }
             catch (Exception ex)
             {
                 throw new Exception("Can not find this RP by id!!!");
+
             }
 
             return listRP;
+
+
+
+
+        }
+
+        public static List<RewardAndPenalty> GetRewardAndPenaltieByIDEmp(int id)
+        {
+            var listRePe = new List<RewardAndPenalty>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listRePe = db.RewardAndPenalties.Where(r => r.IdEmp == id).ToList();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not get reward and penalty by id employee!!!");
+            }
+
+            return listRePe;
         }
     }
 }

@@ -40,7 +40,11 @@ namespace ManagementApp
             if (ActiveMdiChild != null)
                 ActiveMdiChild.Close();
 
-            frmRwAndPt frmrwAndPt = new frmRwAndPt();
+            frmRwAndPt frmrwAndPt = new frmRwAndPt
+            {
+                email = email,
+                role = role
+            };
 
             frmrwAndPt.MdiParent = this;
             frmrwAndPt.Dock = DockStyle.Fill;
