@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -76,94 +78,106 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(22, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 15);
+            this.label2.Size = new System.Drawing.Size(44, 14);
             this.label2.TabIndex = 2;
             this.label2.Text = "ID RP";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(22, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.Size = new System.Drawing.Size(52, 14);
             this.label3.TabIndex = 3;
             this.label3.Text = "Reason";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(22, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 15);
+            this.label4.Size = new System.Drawing.Size(108, 14);
             this.label4.TabIndex = 4;
             this.label4.Text = "Applicable Date";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(411, 54);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 15);
+            this.label5.Size = new System.Drawing.Size(42, 14);
             this.label5.TabIndex = 5;
             this.label5.Text = "Times";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(411, 84);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 15);
+            this.label6.Size = new System.Drawing.Size(92, 14);
             this.label6.TabIndex = 6;
             this.label6.Text = "ID regulation";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(411, 113);
+            this.label7.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(411, 122);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 15);
+            this.label7.Size = new System.Drawing.Size(84, 14);
             this.label7.TabIndex = 7;
             this.label7.Text = "ID employee";
             // 
             // txtIDRP
             // 
+            this.txtIDRP.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtIDRP.Location = new System.Drawing.Point(239, 46);
             this.txtIDRP.Name = "txtIDRP";
-            this.txtIDRP.Size = new System.Drawing.Size(100, 23);
+            this.txtIDRP.Size = new System.Drawing.Size(100, 21);
             this.txtIDRP.TabIndex = 8;
             // 
             // txtReason
             // 
-            this.txtReason.Location = new System.Drawing.Point(239, 84);
+            this.txtReason.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtReason.Location = new System.Drawing.Point(239, 80);
             this.txtReason.Name = "txtReason";
-            this.txtReason.Size = new System.Drawing.Size(100, 23);
+            this.txtReason.Size = new System.Drawing.Size(100, 21);
             this.txtReason.TabIndex = 9;
             // 
             // txtTimes
             // 
+            this.txtTimes.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTimes.Location = new System.Drawing.Point(638, 46);
             this.txtTimes.Name = "txtTimes";
-            this.txtTimes.Size = new System.Drawing.Size(100, 23);
+            this.txtTimes.Size = new System.Drawing.Size(100, 21);
             this.txtTimes.TabIndex = 11;
             // 
             // txtIDRegulation
             // 
+            this.txtIDRegulation.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtIDRegulation.Location = new System.Drawing.Point(638, 81);
             this.txtIDRegulation.Name = "txtIDRegulation";
-            this.txtIDRegulation.Size = new System.Drawing.Size(100, 23);
+            this.txtIDRegulation.Size = new System.Drawing.Size(100, 21);
             this.txtIDRegulation.TabIndex = 12;
             // 
             // txtEmployee
             // 
+            this.txtEmployee.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtEmployee.Location = new System.Drawing.Point(638, 113);
             this.txtEmployee.Name = "txtEmployee";
-            this.txtEmployee.Size = new System.Drawing.Size(100, 23);
+            this.txtEmployee.Size = new System.Drawing.Size(100, 21);
             this.txtEmployee.TabIndex = 13;
             // 
             // btnCreate
             // 
+            this.btnCreate.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCreate.Location = new System.Drawing.Point(709, 179);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(75, 23);
@@ -174,6 +188,7 @@
             // 
             // btnLoad
             // 
+            this.btnLoad.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLoad.Location = new System.Drawing.Point(709, 222);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
@@ -183,6 +198,7 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDelete.Location = new System.Drawing.Point(709, 268);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
@@ -195,10 +211,20 @@
             // 
             this.dgvRP.AllowUserToAddRows = false;
             this.dgvRP.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRP.Location = new System.Drawing.Point(137, 160);
             this.dgvRP.Name = "dgvRP";
             this.dgvRP.ReadOnly = true;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dgvRP.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRP.RowTemplate.Height = 25;
             this.dgvRP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRP.Size = new System.Drawing.Size(536, 150);
@@ -208,10 +234,11 @@
             // dtpAppDate
             // 
             this.dtpAppDate.CustomFormat = "MM-dd-yyyy";
+            this.dtpAppDate.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dtpAppDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpAppDate.Location = new System.Drawing.Point(239, 125);
+            this.dtpAppDate.Location = new System.Drawing.Point(239, 118);
             this.dtpAppDate.Name = "dtpAppDate";
-            this.dtpAppDate.Size = new System.Drawing.Size(100, 23);
+            this.dtpAppDate.Size = new System.Drawing.Size(100, 21);
             this.dtpAppDate.TabIndex = 18;
             // 
             // frmRwAndPt
