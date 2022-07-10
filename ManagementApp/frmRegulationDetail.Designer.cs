@@ -33,9 +33,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtIDReg = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtStatus = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cboStatus = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -84,14 +84,6 @@
             this.txtName.Size = new System.Drawing.Size(100, 21);
             this.txtName.TabIndex = 4;
             // 
-            // txtStatus
-            // 
-            this.txtStatus.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtStatus.Location = new System.Drawing.Point(186, 169);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(100, 21);
-            this.txtStatus.TabIndex = 5;
-            // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -114,14 +106,25 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // cboStatus
+            // 
+            this.cboStatus.FormattingEnabled = true;
+            this.cboStatus.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.cboStatus.Location = new System.Drawing.Point(186, 169);
+            this.cboStatus.Name = "cboStatus";
+            this.cboStatus.Size = new System.Drawing.Size(100, 23);
+            this.cboStatus.TabIndex = 9;
+            // 
             // frmRegulationDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(375, 266);
+            this.Controls.Add(this.cboStatus);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtIDReg);
             this.Controls.Add(this.label3);
@@ -142,8 +145,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIDReg;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cboStatus;
     }
 }

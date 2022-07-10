@@ -158,10 +158,12 @@ namespace ManagementApp
             }
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        
+
+        private void txtSearchh_TextChanged(object sender, EventArgs e)
         {
-            string value = txtSearch.Text;
-            string type = cboType.SelectedItem.ToString();
+            string value = txtSearchh.Text;
+            string type = cboTypee.SelectedItem.ToString();
             try
             {
 

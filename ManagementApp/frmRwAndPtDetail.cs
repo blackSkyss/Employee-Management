@@ -115,7 +115,7 @@ namespace ManagementApp
             }
             else if (isBetweenTwoDates(dtpAppDate.Text) == false)
             {
-                MessageBox.Show("Day of birth must be from 01-01-1990 to today", "Reward and penalty Management",
+                MessageBox.Show("Applicable date must be from 01-01-1990 to today", "Reward and penalty Management",
                   MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 

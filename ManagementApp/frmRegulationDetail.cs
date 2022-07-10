@@ -27,7 +27,7 @@ namespace ManagementApp
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtIDReg.Text.ToString() == ""
-             || txtName.Text == "" || txtStatus.Text == "")
+             || txtName.Text == "")
             {
                 MessageBox.Show("All field are required!", "Regulation Management",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -40,7 +40,7 @@ namespace ManagementApp
                     {
                         IdReg = int.Parse(txtIDReg.Text),
                         Name = txtName.Text,
-                        Status = int.Parse(txtStatus.Text),
+                        Status = int.Parse(cboStatus.Text),
                     };
 
                     if (reg != null)
@@ -94,7 +94,7 @@ namespace ManagementApp
                 txtIDReg.Enabled = false;
                 txtIDReg.Text = regInfo.IdReg.ToString();
                 txtName.Text = regInfo.Name.ToString();
-                txtStatus.Text = regInfo.Status.ToString();
+                cboStatus.Text = regInfo.Status.ToString();
             }
         }
 

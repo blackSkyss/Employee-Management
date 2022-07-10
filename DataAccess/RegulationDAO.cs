@@ -147,9 +147,13 @@ namespace DataAccess
                     {
                         listReg = db.Regulations.Where(c => c.Status == 1).ToList();
                     }
-                    else
+                    else if(status.Equals("Penalty"))
                     {
                         listReg = db.Regulations.Where(c => c.Status == 0).ToList();
+                    }
+                    else if (status.Equals("All"))
+                    {
+                        listReg = db.Regulations.ToList();
                     }
 
                 }
