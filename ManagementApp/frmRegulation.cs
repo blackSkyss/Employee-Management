@@ -46,8 +46,6 @@ namespace ManagementApp
             }
         }
 
-        
-
         private void btnClose_Click(object sender, EventArgs e) => Close();
 
         private void dgvRegulation_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -64,6 +62,20 @@ namespace ManagementApp
             {
                 loadReg();
                 source.Position = source.Count - 1;
+            }
+        }
+        public void LoadTypeReg()
+        {
+            try
+            {
+                var listReg = regRepo.GetRegulation();
+                cboFilterStatus.DataSource = listReg;
+                cboFilterStatus.ValueMember = "Status";
+                cboFilterStatus.DisplayMember = "Name";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error on load list of type certificate!!!");
             }
         }
 
@@ -182,28 +194,13 @@ namespace ManagementApp
             }
         }
 
+
+
         private void cboFilterStatus_SelectedValueChanged(object sender, EventArgs e)
         {
-            string value;
-            try
-            {
-                value = cboFilterStatus.Text;
-                if (!String.IsNullOrEmpty(value))
-                {
-                    List<Regulation> listReg = regRepo.FilterRegByStatus(value);
-                    Binding(listReg);
-                }
-                else
-                {
-                    MessageBox.Show("Not found!!!");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("error");
-            }
+            string status = cboFilterStatus.SelectedItem.ToString();
+            List<Regulation> listReg = regRepo.FilterRegByStatus(status);
+            Binding(listReg);
         }
-
-        
     }
 }

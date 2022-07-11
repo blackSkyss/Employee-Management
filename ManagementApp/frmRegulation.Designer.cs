@@ -205,6 +205,7 @@
             // 
             // cboType
             // 
+            this.cboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboType.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cboType.FormattingEnabled = true;
             this.cboType.Items.AddRange(new object[] {
@@ -215,10 +216,10 @@
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(86, 22);
             this.cboType.TabIndex = 14;
-            this.cboType.Text = "ID";
             // 
             // cboFilterStatus
             // 
+            this.cboFilterStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFilterStatus.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cboFilterStatus.FormattingEnabled = true;
             this.cboFilterStatus.Items.AddRange(new object[] {
@@ -230,7 +231,6 @@
             this.cboFilterStatus.Name = "cboFilterStatus";
             this.cboFilterStatus.Size = new System.Drawing.Size(86, 22);
             this.cboFilterStatus.TabIndex = 15;
-            this.cboFilterStatus.Text = "All";
             this.cboFilterStatus.SelectedValueChanged += new System.EventHandler(this.cboFilterStatus_SelectedValueChanged);
             // 
             // label6

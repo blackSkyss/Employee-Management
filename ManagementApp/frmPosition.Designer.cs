@@ -203,6 +203,7 @@
             // 
             // cboTypee
             // 
+            this.cboTypee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTypee.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cboTypee.FormattingEnabled = true;
             this.cboTypee.Items.AddRange(new object[] {
@@ -212,7 +213,6 @@
             this.cboTypee.Name = "cboTypee";
             this.cboTypee.Size = new System.Drawing.Size(121, 22);
             this.cboTypee.TabIndex = 12;
-            this.cboTypee.Text = "ID";
             // 
             // txtSearchh
             // 
