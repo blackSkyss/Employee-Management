@@ -29,6 +29,7 @@ namespace ManagementApp
             this.ControlBox = false;
             this.WindowState = FormWindowState.Maximized;
             loadPosition();
+            cboTypee.SelectedIndex = 0;
         }
         public void loadPosition()
         {

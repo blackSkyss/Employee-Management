@@ -326,5 +326,10 @@ namespace ManagementApp
                 MessageBox.Show("Not found");
             }
         }
+
+        private void cbofilter_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
     }
 }

@@ -29,6 +29,8 @@ namespace ManagementApp
             this.ControlBox = false;
             this.WindowState = FormWindowState.Maximized;
             loadReg();
+            cboType.SelectedIndex = 0;
+            cboFilterStatus.SelectedIndex = 0;
         }
 
         public void loadReg()

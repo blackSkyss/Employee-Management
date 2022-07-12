@@ -288,6 +288,7 @@ namespace ManagementApp
         private void cbofilterdep_Click(object sender, EventArgs e)
         {
             LoadDepartment();
+            
 
         }
 
@@ -426,6 +427,17 @@ namespace ManagementApp
             {
                 MessageBox.Show("Not found");
             }
+        }
+
+        private void cbofilterdep_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+           
+        }
+
+        private void cbofilterpos_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
         }
     }
 }
