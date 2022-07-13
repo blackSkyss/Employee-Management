@@ -123,5 +123,10 @@ namespace ManagementApp
         {
             Application.Exit();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

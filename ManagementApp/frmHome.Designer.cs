@@ -36,6 +36,7 @@
             this.posToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.certificateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regulationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             this.departmentToolStripMenuItem,
             this.posToolStripMenuItem,
             this.certificateToolStripMenuItem,
-            this.regulationToolStripMenuItem});
+            this.regulationToolStripMenuItem,
+            this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1193, 32);
@@ -61,7 +63,7 @@
             this.rewardAndPenaltyToolStripMenuItem});
             this.empToolStripMenuItem.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.empToolStripMenuItem.Name = "empToolStripMenuItem";
-            this.empToolStripMenuItem.Size = new System.Drawing.Size(115, 29);
+            this.empToolStripMenuItem.Size = new System.Drawing.Size(115, 28);
             this.empToolStripMenuItem.Text = "Employee";
             // 
             // employeeManagementToolStripMenuItem
@@ -82,7 +84,7 @@
             // 
             this.departmentToolStripMenuItem.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.departmentToolStripMenuItem.Name = "departmentToolStripMenuItem";
-            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(139, 29);
+            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(139, 28);
             this.departmentToolStripMenuItem.Text = "Department";
             this.departmentToolStripMenuItem.Click += new System.EventHandler(this.departmentToolStripMenuItem_Click);
             // 
@@ -90,7 +92,7 @@
             // 
             this.posToolStripMenuItem.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.posToolStripMenuItem.Name = "posToolStripMenuItem";
-            this.posToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.posToolStripMenuItem.Size = new System.Drawing.Size(103, 28);
             this.posToolStripMenuItem.Text = "Position";
             this.posToolStripMenuItem.Click += new System.EventHandler(this.posToolStripMenuItem_Click);
             // 
@@ -98,7 +100,7 @@
             // 
             this.certificateToolStripMenuItem.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.certificateToolStripMenuItem.Name = "certificateToolStripMenuItem";
-            this.certificateToolStripMenuItem.Size = new System.Drawing.Size(128, 29);
+            this.certificateToolStripMenuItem.Size = new System.Drawing.Size(128, 28);
             this.certificateToolStripMenuItem.Text = "Certificate";
             this.certificateToolStripMenuItem.Click += new System.EventHandler(this.certificateToolStripMenuItem_Click);
             // 
@@ -109,6 +111,15 @@
             this.regulationToolStripMenuItem.Size = new System.Drawing.Size(129, 28);
             this.regulationToolStripMenuItem.Text = "Regulation";
             this.regulationToolStripMenuItem.Click += new System.EventHandler(this.regulationToolStripMenuItem_Click);
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.logoutToolStripMenuItem.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(91, 28);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // frmHome
             // 
@@ -137,5 +148,6 @@
         private System.Windows.Forms.ToolStripMenuItem posToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem certificateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regulationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
