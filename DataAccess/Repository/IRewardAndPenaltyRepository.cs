@@ -14,11 +14,12 @@ namespace DataAccess.Repository
 
         List<RewardAndPenalty> GetRewardAndPenaltyByName(string name);
 
-        List<RewardAndPenalty> SearchRewardAndPenaltyById(string id);
+        
 
-
+        List<RewardAndPenalty> SearchRewardAndPenaltyByIdRP(string id);
         List<RewardAndPenalty> GetRewardAndPenaltieByIDEmp(int id);
-
+        List<RewardAndPenalty> SearchRewardAndPenaltieByIDEmp(string id);
+        List<RewardAndPenalty> SearchRewardAndPenaltieByIDReg(string id);
 
         void InsertRewardAndPenalty(RewardAndPenalty p);
         void UpdateRewardAndPenalty(RewardAndPenalty p);

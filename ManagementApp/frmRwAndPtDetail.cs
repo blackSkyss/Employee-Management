@@ -184,5 +184,15 @@ namespace ManagementApp
 
         private void btnCancel_Click(object sender, EventArgs e) => Close();
 
+        private void cboRegulation_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void cboEmployee_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
     }
 }
+

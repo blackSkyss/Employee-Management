@@ -58,18 +58,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label1.Location = new System.Drawing.Point(399, 37);
+            this.label1.Location = new System.Drawing.Point(319, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(423, 28);
+            this.label1.Size = new System.Drawing.Size(359, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Reward And Penalty Management";
             // 
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnClose.Location = new System.Drawing.Point(563, 550);
+            this.btnClose.Location = new System.Drawing.Point(450, 440);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(111, 33);
+            this.btnClose.Size = new System.Drawing.Size(89, 26);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -79,10 +81,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(31, 82);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(25, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 21);
+            this.label2.Size = new System.Drawing.Size(54, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "ID RP";
             // 
@@ -90,10 +91,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(31, 148);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(25, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 21);
+            this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Reason";
             // 
@@ -101,10 +101,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(31, 208);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(25, 166);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 21);
+            this.label4.Size = new System.Drawing.Size(134, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Applicable Date";
             // 
@@ -112,10 +111,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(587, 90);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(470, 72);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 21);
+            this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 5;
             this.label5.Text = "Times";
             // 
@@ -123,10 +121,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(587, 140);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(470, 112);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 21);
+            this.label6.Size = new System.Drawing.Size(114, 17);
             this.label6.TabIndex = 6;
             this.label6.Text = "ID regulation";
             // 
@@ -134,65 +131,64 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(587, 203);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(470, 162);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 21);
+            this.label7.Size = new System.Drawing.Size(105, 17);
             this.label7.TabIndex = 7;
             this.label7.Text = "ID employee";
             // 
             // txtIDRP
             // 
             this.txtIDRP.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtIDRP.Location = new System.Drawing.Point(341, 77);
-            this.txtIDRP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIDRP.Location = new System.Drawing.Point(273, 62);
+            this.txtIDRP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDRP.Name = "txtIDRP";
-            this.txtIDRP.Size = new System.Drawing.Size(141, 28);
+            this.txtIDRP.Size = new System.Drawing.Size(114, 25);
             this.txtIDRP.TabIndex = 8;
             // 
             // txtReason
             // 
             this.txtReason.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtReason.Location = new System.Drawing.Point(341, 133);
-            this.txtReason.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtReason.Location = new System.Drawing.Point(273, 106);
+            this.txtReason.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtReason.Name = "txtReason";
-            this.txtReason.Size = new System.Drawing.Size(141, 28);
+            this.txtReason.Size = new System.Drawing.Size(114, 25);
             this.txtReason.TabIndex = 9;
             // 
             // txtTimes
             // 
             this.txtTimes.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtTimes.Location = new System.Drawing.Point(911, 77);
-            this.txtTimes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTimes.Location = new System.Drawing.Point(729, 62);
+            this.txtTimes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTimes.Name = "txtTimes";
-            this.txtTimes.Size = new System.Drawing.Size(141, 28);
+            this.txtTimes.Size = new System.Drawing.Size(114, 25);
             this.txtTimes.TabIndex = 11;
             // 
             // txtIDRegulation
             // 
             this.txtIDRegulation.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtIDRegulation.Location = new System.Drawing.Point(911, 135);
-            this.txtIDRegulation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtIDRegulation.Location = new System.Drawing.Point(729, 108);
+            this.txtIDRegulation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDRegulation.Name = "txtIDRegulation";
-            this.txtIDRegulation.Size = new System.Drawing.Size(141, 28);
+            this.txtIDRegulation.Size = new System.Drawing.Size(114, 25);
             this.txtIDRegulation.TabIndex = 12;
             // 
             // txtEmployee
             // 
             this.txtEmployee.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtEmployee.Location = new System.Drawing.Point(911, 188);
-            this.txtEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmployee.Location = new System.Drawing.Point(729, 150);
+            this.txtEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmployee.Name = "txtEmployee";
-            this.txtEmployee.Size = new System.Drawing.Size(141, 28);
+            this.txtEmployee.Size = new System.Drawing.Size(114, 25);
             this.txtEmployee.TabIndex = 13;
             // 
             // btnCreate
             // 
             this.btnCreate.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCreate.Location = new System.Drawing.Point(1041, 420);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCreate.Location = new System.Drawing.Point(833, 336);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(107, 38);
+            this.btnCreate.Size = new System.Drawing.Size(86, 30);
             this.btnCreate.TabIndex = 14;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
@@ -201,10 +197,10 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(1041, 490);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDelete.Location = new System.Drawing.Point(833, 392);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(107, 38);
+            this.btnDelete.Size = new System.Drawing.Size(86, 30);
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -224,8 +220,8 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvRP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRP.Location = new System.Drawing.Point(31, 292);
-            this.dgvRP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvRP.Location = new System.Drawing.Point(25, 234);
+            this.dgvRP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvRP.MultiSelect = false;
             this.dgvRP.Name = "dgvRP";
             this.dgvRP.ReadOnly = true;
@@ -234,7 +230,7 @@
             this.dgvRP.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRP.RowTemplate.Height = 25;
             this.dgvRP.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRP.Size = new System.Drawing.Size(977, 250);
+            this.dgvRP.Size = new System.Drawing.Size(782, 200);
             this.dgvRP.TabIndex = 17;
             this.dgvRP.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRP_CellDoubleClick);
             // 
@@ -243,18 +239,19 @@
             this.dtpAppDate.CustomFormat = "MM-dd-yyyy";
             this.dtpAppDate.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.dtpAppDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpAppDate.Location = new System.Drawing.Point(341, 197);
-            this.dtpAppDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtpAppDate.Location = new System.Drawing.Point(273, 158);
+            this.dtpAppDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpAppDate.Name = "dtpAppDate";
-            this.dtpAppDate.Size = new System.Drawing.Size(141, 28);
+            this.dtpAppDate.Size = new System.Drawing.Size(114, 25);
             this.dtpAppDate.TabIndex = 18;
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtSearch.Location = new System.Drawing.Point(771, 243);
+            this.txtSearch.Location = new System.Drawing.Point(729, 190);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(100, 28);
+            this.txtSearch.Size = new System.Drawing.Size(114, 25);
             this.txtSearch.TabIndex = 19;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -264,27 +261,31 @@
             this.cboType.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cboType.FormattingEnabled = true;
             this.cboType.Items.AddRange(new object[] {
-            "ID"});
-            this.cboType.Location = new System.Drawing.Point(681, 242);
+            "ID RP",
+            "ID Regulation",
+            "ID Employee"});
+            this.cboType.Location = new System.Drawing.Point(545, 194);
+            this.cboType.Margin = new System.Windows.Forms.Padding(2);
             this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(70, 29);
+            this.cboType.Size = new System.Drawing.Size(133, 25);
             this.cboType.TabIndex = 20;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(587, 247);
+            this.label8.Location = new System.Drawing.Point(470, 198);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 21);
+            this.label8.Size = new System.Drawing.Size(62, 17);
             this.label8.TabIndex = 21;
             this.label8.Text = "Search";
             // 
             // frmRwAndPt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1181, 597);
+            this.ClientSize = new System.Drawing.Size(945, 478);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cboType);
             this.Controls.Add(this.txtSearch);
@@ -305,6 +306,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmRwAndPt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRwAndPt";

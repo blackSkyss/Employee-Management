@@ -70,6 +70,7 @@ namespace ManagementApp
             txtEmployee.Enabled = false;
             txtIDRegulation.Enabled = false;
             this.ControlBox = false;
+            cboType.SelectedIndex = 0;
             this.WindowState = FormWindowState.Maximized;
             loadRP();
 
@@ -208,9 +209,17 @@ namespace ManagementApp
                 if (!string.IsNullOrEmpty(value))
                 {
                     var listRP = new List<RewardAndPenalty>();
-                    if (type.Equals("ID"))
+                    if (type.Equals("ID RP"))
                     {
-                        listRP = RPRepo.SearchRewardAndPenaltyById(value);
+                        listRP = RPRepo.SearchRewardAndPenaltyByIdRP(value);
+                    }
+                    else if (type.Equals("ID Regulation"))
+                    {
+                        listRP = RPRepo.SearchRewardAndPenaltieByIDReg(value);
+                    }
+                    else
+                    {
+                        listRP = RPRepo.SearchRewardAndPenaltieByIDEmp(value);
                     }
 
                     Binding(listRP);

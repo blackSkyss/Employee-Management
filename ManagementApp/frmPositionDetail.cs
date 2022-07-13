@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,6 +23,14 @@ namespace ManagementApp
         public frmPositionDetail()
         {
             InitializeComponent();
+        }
+
+        private bool checkOnlyNumber(string value)
+        {
+            string strRegex = "^[0-9]*$";
+            Regex re = new Regex(strRegex);
+
+            return re.IsMatch(value);
         }
 
         private void frmPositionDetail_Load(object sender, EventArgs e)
@@ -41,8 +50,13 @@ namespace ManagementApp
             if (txtPosId.Text.ToString() == ""
               || txtPosName.Text == "" || txtDes.Text == "")
             {
-                MessageBox.Show("All field are required!", "Certificate Management",
+                MessageBox.Show("All field are required!", "Position Management",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (checkOnlyNumber(txtPosId.Text) == false)
+            {
+                MessageBox.Show("ID position contain only number", "Position Management",
+                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

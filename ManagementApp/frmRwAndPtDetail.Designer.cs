@@ -146,6 +146,7 @@
             this.cboRegulation.Name = "cboRegulation";
             this.cboRegulation.Size = new System.Drawing.Size(100, 22);
             this.cboRegulation.TabIndex = 10;
+            this.cboRegulation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboRegulation_KeyDown);
             // 
             // cboEmployee
             // 
@@ -155,6 +156,7 @@
             this.cboEmployee.Name = "cboEmployee";
             this.cboEmployee.Size = new System.Drawing.Size(100, 22);
             this.cboEmployee.TabIndex = 11;
+            this.cboEmployee.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboEmployee_KeyDown);
             // 
             // btnSave
             // 

@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,6 +25,14 @@ namespace ManagementApp
             InitializeComponent();
         }
 
+        private bool checkOnlyNumber(string value)
+        {
+            string strRegex = "^[0-9]*$";
+            Regex re = new Regex(strRegex);
+
+            return re.IsMatch(value);
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtIDReg.Text.ToString() == ""
@@ -31,6 +40,11 @@ namespace ManagementApp
             {
                 MessageBox.Show("All field are required!", "Regulation Management",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (checkOnlyNumber(txtIDReg.Text) == false)
+            {
+                MessageBox.Show("ID regulation contain only number", "Regulation Management",
+                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -89,12 +103,14 @@ namespace ManagementApp
 
         private void frmRegulationDetail_Load(object sender, EventArgs e)
         {
+            cboStatus.SelectedIndex = 0;
             if (InsertOrUpdate == true)
             {
                 txtIDReg.Enabled = false;
                 txtIDReg.Text = regInfo.IdReg.ToString();
                 txtName.Text = regInfo.Name.ToString();
                 cboStatus.Text = regInfo.Status.ToString();
+                cboStatus.SelectedIndex = 0;
             }
         }
 
