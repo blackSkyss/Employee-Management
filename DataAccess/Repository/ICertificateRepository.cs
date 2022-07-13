@@ -26,5 +26,12 @@ namespace DataAccess.Repository
         List<Certificate> SearchCertificateByID(string id);
 
         List<Certificate> FilterCertificateByIDType(string id);
+
+        //Role employee-----------------------------------------
+        List<Certificate> FilterCertificateByIDTypeEmp(string idtype, string idemp);
+
+        List<Certificate> SearchCertificateByNameCer(string namecer, string idemp);
+
+        List<Certificate> SearchCertificateByIDCer(string idcer, string idemp);
     }
 }

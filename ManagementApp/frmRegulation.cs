@@ -54,7 +54,7 @@ namespace ManagementApp
         {
             frmRegulationDetail frmRegulationDetail = new frmRegulationDetail
             {
-                Text = "Create Regulation",
+                Text = "Uodate Regulation",
                 regRepo = regRepo,
                 regInfo = GetObjectRegulation(),
                 InsertOrUpdate = true

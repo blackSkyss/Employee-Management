@@ -281,7 +281,16 @@ namespace ManagementApp
                 value = cbofilter.SelectedValue.ToString();
                 if (!String.IsNullOrEmpty(value))
                 {
-                    List<Certificate> listCer = cerRep.FilterCertificateByIDType(value);
+                    List<Certificate> listCer = null;
+                    if (role == 1)
+                    {
+                        listCer = cerRep.FilterCertificateByIDType(value);
+                    }
+                    else
+                    {
+                        listCer = cerRep.FilterCertificateByIDTypeEmp(value, (empRep.GetEmployeeByEmailOne(email).IdEmp).ToString());
+                    }
+
                     Binding(listCer);
                 }
                 else
@@ -306,11 +315,27 @@ namespace ManagementApp
                     var listCer = new List<Certificate>();
                     if (type.Equals("ID"))
                     {
-                        listCer = cerRep.SearchCertificateByID(value);
+                        if (role == 1)
+                        {
+                            listCer = cerRep.SearchCertificateByID(value);
+                        }
+                        else
+                        {
+                            listCer = cerRep.SearchCertificateByIDCer(value, empRep.GetEmployeeByEmailOne(email).IdEmp.ToString());
+                        }
+
                     }
                     else
                     {
-                        listCer = cerRep.GetCertificateByName(value);
+                        if (role == 1)
+                        {
+                            listCer = cerRep.GetCertificateByName(value);
+                        }
+                        else
+                        {
+                            listCer = cerRep.SearchCertificateByNameCer(value, empRep.GetEmployeeByEmailOne(email).IdEmp.ToString());
+                        }
+
                     }
 
                     Binding(listCer);

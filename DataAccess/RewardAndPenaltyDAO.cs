@@ -183,5 +183,46 @@ namespace DataAccess
 
             return listRePe;
         }
+
+        //Search RP by ID role employee------------------------------------------------------------------
+        public static List<RewardAndPenalty> SearchRewardAndPenaltyByIDReEmp(string idre, string idemp)
+        {
+            var listRePe = new List<RewardAndPenalty>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listRePe = db.RewardAndPenalties.Where(r => r.IdRp.ToString().Equals(idre)
+                                                           && r.IdEmp.ToString().Equals(idemp)).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not get reward and penalty by id regulation!!!");
+            }
+
+            return listRePe;
+        }
+
+        //Search RP by ID regulation role employee--------------------------------------------------------
+        public static List<RewardAndPenalty> SearchRewardAndPenaltyByIDRegEmp(string idreg, string idemp)
+        {
+            var listRePe = new List<RewardAndPenalty>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listRePe = db.RewardAndPenalties.Where(r => r.IdReg.ToString().Equals(idreg)
+                                                           && r.IdEmp.ToString().Equals(idemp)).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not get reward and penalty by id regulation!!!");
+            }
+
+            return listRePe;
+        }
+
     }
 }

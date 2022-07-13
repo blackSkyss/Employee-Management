@@ -30,8 +30,11 @@ namespace DataAccess.Repository
 
         public List<RewardAndPenalty> SearchRewardAndPenaltieByIDEmp(string id) =>RewardAndPenaltyDAO.SearchRewardAndPenaltyByIDEmp(id);
 
-        public List<RewardAndPenalty> SearchRewardAndPenaltieByIDReg(string id) =>RewardAndPenaltyDAO.SearchRewardAndPenaltyByIDReg(id);   
-        
+        public List<RewardAndPenalty> SearchRewardAndPenaltieByIDReg(string id) =>RewardAndPenaltyDAO.SearchRewardAndPenaltyByIDReg(id);
+
+        public List<RewardAndPenalty> SearchRewardAndPenaltyByIDReEmp(string idre, string idemp) => RewardAndPenaltyDAO.SearchRewardAndPenaltyByIDReEmp(idre, idemp);
+
+        public List<RewardAndPenalty> SearchRewardAndPenaltyByIDRegEmp(string idreg, string idemp) => RewardAndPenaltyDAO.SearchRewardAndPenaltyByIDRegEmp(idreg, idemp);   
         public List<RewardAndPenalty> SearchRewardAndPenaltyByIdRP(string id) => RewardAndPenaltyDAO.SearchRPByID(id);
         
 

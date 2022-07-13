@@ -199,5 +199,67 @@ namespace DataAccess
 
             return listCer;
         }
+
+        //Filter certificate role employee----------------------------------------------------------
+        public static List<Certificate> FilterCertificateByIDTypeEmp(string idtype, string idemp)
+        {
+            var listCer = new List<Certificate>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listCer = db.Certificates.Where(c => c.IdTypeCer.ToString().Equals(idtype)
+                                                    && c.IdEmp.ToString().Equals(idemp)).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not filter certificate by id type!!!");
+            }
+
+            return listCer;
+        }
+
+        //Search certificate by id role employee------------------------------------------------------
+        public static List<Certificate> SearchCertificateByIDCer(string idcer, string idemp)
+        {
+            var listCer = new List<Certificate>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listCer = db.Certificates.Where(c => c.CerId.ToString().Equals(idcer)
+                                                    && c.IdEmp.ToString().Equals(idemp)).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not filter certificate by id type!!!");
+            }
+
+            return listCer;
+        }
+
+        //Search certificate by name role employee------------------------------------------------------
+        public static List<Certificate> SearchCertificateByNameCer(string namecer, string idemp)
+        {
+            var listCer = new List<Certificate>();
+            try
+            {
+                using (var db = new PRN211Context())
+                {
+                    listCer = db.Certificates.Where(c => c.CerName.ToLower().Contains(namecer.ToLower())
+                                                    && c.IdEmp.ToString().Equals(idemp)).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Can not filter certificate by id type!!!");
+            }
+
+            return listCer;
+        }
+
+
     }
 }

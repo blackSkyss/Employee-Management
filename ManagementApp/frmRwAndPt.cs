@@ -78,6 +78,7 @@ namespace ManagementApp
             {
                 btnDelete.Enabled = false;
                 btnCreate.Enabled = false;
+                cboType.Items.RemoveAt(2);
             }
         }
 
@@ -184,7 +185,7 @@ namespace ManagementApp
             {
                 frmRwAndPtDetail frmRwAndPtDetail = new frmRwAndPtDetail
                 {
-                    Text = "Create RP",
+                    Text = "Update RP",
                     empRepo = empRepo,
                     regRepo = regRepo,
                     RPrepo = RPRepo,
@@ -211,11 +212,26 @@ namespace ManagementApp
                     var listRP = new List<RewardAndPenalty>();
                     if (type.Equals("ID RP"))
                     {
-                        listRP = RPRepo.SearchRewardAndPenaltyByIdRP(value);
+                        if (role == 1)
+                        {
+                            listRP = RPRepo.SearchRewardAndPenaltyByIdRP(value);
+                        }
+                        else
+                        {
+                            listRP = RPRepo.SearchRewardAndPenaltyByIDReEmp(value, empRepo.GetEmployeeByEmailOne(email).IdEmp.ToString());
+                        }
+
                     }
                     else if (type.Equals("ID Regulation"))
                     {
-                        listRP = RPRepo.SearchRewardAndPenaltieByIDReg(value);
+                        if(role == 1)
+                        {
+                            listRP = RPRepo.SearchRewardAndPenaltieByIDReg(value);
+                        }
+                        else
+                        {
+                            listRP = RPRepo.SearchRewardAndPenaltyByIDRegEmp(value, empRepo.GetEmployeeByEmailOne(email).IdEmp.ToString());
+                        }  
                     }
                     else
                     {

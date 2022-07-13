@@ -24,5 +24,12 @@ namespace DataAccess.Repository
         void InsertRewardAndPenalty(RewardAndPenalty p);
         void UpdateRewardAndPenalty(RewardAndPenalty p);
         void DeleteRewardAndPenalty(RewardAndPenalty p);
+
+        //Role employee-----------------------------------------------------------------------
+
+        List<RewardAndPenalty> SearchRewardAndPenaltyByIDReEmp(string idre, string idemp);
+        List<RewardAndPenalty> SearchRewardAndPenaltyByIDRegEmp(string idreg, string idemp);
+
+
     }
 }
