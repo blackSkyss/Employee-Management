@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.empToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -126,7 +125,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1193, 628);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmHome";
