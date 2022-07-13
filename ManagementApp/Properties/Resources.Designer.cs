@@ -59,5 +59,15 @@ namespace ManagementApp.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _23552_23552_xuhuongEvent2020_Covid_19_Ava_2 {
+            get {
+                object obj = ResourceManager.GetObject("23552_23552_xuhuongEvent2020-Covid-19_Ava_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
